@@ -31,11 +31,11 @@ const permutationsIsPalindrome = string => {
   if (oddCharsOut.length > 1) return false;
   else return true;
 }
-const tester = (actual, expected) => {
-  if (actual === expected) console.log('passed');
-  else console.log('failed');
-};
-tester(permutationsIsPalindrome('TactCoa'), true);
-tester(permutationsIsPalindrome('!Tact Coa'), true);
-tester(permutationsIsPalindrome('!Tactt Coa'), false);
-tester(permutationsIsPalindrome('!Tacttt Coa'), true);
+// const tester = (actual, expected) => {
+//   if (actual === expected) console.log('passed');
+//   else console.log('failed');
+// };
+// tester(permutationsIsPalindrome('TactCoa'), true);
+// tester(permutationsIsPalindrome('!Tact Coa'), true);
+// tester(permutationsIsPalindrome('!Tactt Coa'), false);
+// tester(permutationsIsPalindrome('!Tacttt Coa'), true);
