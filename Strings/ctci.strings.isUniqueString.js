@@ -8,4 +8,4 @@ const isUniqueString = string => {
   return true;
 }
 // console.log(isUniqueString('hello')) // false
-console.log(isUniqueString('help')) // true
+// console.log(isUniqueString('help')) // true
