@@ -35,16 +35,15 @@ const isOneAway = (string1, string2) => {
   }
   return true;
 }
-const tester = (actual, expected) => {
-  if (actual === expected) console.log('passed');
-  else console.log('failed');
-};
-tester(isOneAway('pale', 'ale'), true);
-tester(isOneAway('pales', 'pale'), true);
-tester(isOneAway('pale', 'bale'), true);
-tester(isOneAway('pale', 'bake'), false);
-tester(isOneAway('pale', 'alpe'), false);
+// const tester = (actual, expected) => {
+//   if (actual === expected) console.log('passed');
+//   else console.log('failed');
+// };
+// tester(isOneAway('pale', 'ale'), true);
+// tester(isOneAway('pales', 'pale'), true);
+// tester(isOneAway('pale', 'bale'), true);
+// tester(isOneAway('pale', 'bake'), false);
+// tester(isOneAway('pale', 'alpe'), false);
 
 // Time: O(ab)
 // Space: O(a)
-
