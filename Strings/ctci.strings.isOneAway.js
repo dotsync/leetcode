@@ -23,6 +23,7 @@ const tester = (actual, expected) => {
 tester(isOneAway('pale', 'ale'), true);
 tester(isOneAway('pales', 'pale'), true);
 tester(isOneAway('pale', 'bale'), true);
+tester(isOneAway('pale', 'balee'), false);
 tester(isOneAway('pale', 'bake'), false);
 tester(isOneAway('pale', 'alpe'), false);
 
