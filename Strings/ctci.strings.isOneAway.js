@@ -24,6 +24,8 @@ tester(isOneAway('pale', 'ale'), true);
 tester(isOneAway('pales', 'pale'), true);
 tester(isOneAway('pale', 'bale'), true);
 tester(isOneAway('pale', 'bake'), false);
+tester(isOneAway('pale', 'alpe'), false);
+
 
 // Time: O(ab)
 // Space: O(a)
