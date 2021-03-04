@@ -29,8 +29,8 @@ function productOfArrayExceptSelf(arr) {
   console.log(arr)
   return arr;
 }
-const tester = (actual, expected) => {
-  if (actual === expected) console.log('passed');
-  else console.log('failed');
-};
-tester(productOfArrayExceptSelf([1, 2, 3, 4]), [24, 12, 8, 6]);
+// const tester = (actual, expected) => {
+//   if (actual === expected) console.log('passed');
+//   else console.log('failed');
+// };
+// tester(productOfArrayExceptSelf([1, 2, 3, 4]), [24, 12, 8, 6]);
