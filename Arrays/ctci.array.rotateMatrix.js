@@ -35,3 +35,4 @@ const rotateMatrixLargeTestResult = [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9
 tester(rotateMatrix(rotateMatrixLargeTestInput), rotateMatrixLargeTestResult);
 tester(rotateMatrix([[1, 2], [3, 4]]), [[3, 1], [4, 2]]);
 tester(rotateMatrix([[1]]), [[1]]);
+
