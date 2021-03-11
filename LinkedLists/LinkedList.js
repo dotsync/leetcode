@@ -15,7 +15,7 @@ class LinkedList {
       // check if current node.data === data
       if (currentNode.data === data) {
         // return the node
-        return currentNode.data;
+        currentNode.data === data
       }
       // update current to be curr.next
       currentNode = currentNode.getNextNode();
@@ -23,7 +23,7 @@ class LinkedList {
       counter++;
     }
     // not found
-    return undefined;
+    return 'Unable to find';
   }
 
   // addAtHead
@@ -31,8 +31,12 @@ class LinkedList {
     const newHead = new Node(data);
     const oldHead = this.head;
     // check if there is a head
-    if (oldHead !== null) this.head.setNextNode(oldHead);
-    else this.head = newHead;
+    if (this.head === null) {
+      this.head = newHead
+    } else {
+      this.head = newHead
+      this.head.setNextNode(oldHead);
+    }
     this.length++;
   }
   // addAtTail
