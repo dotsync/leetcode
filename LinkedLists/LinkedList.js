@@ -5,9 +5,17 @@ class LinkedList {
     this.head = null;
     this.length = 0;
   }
+  // createListFromValues
+  // createListFromValues(...values) {
+  //   const linkedList = new LinkedList();
+  //   for (let i = values.length - 1; i >= 0; i--) {
+  //     linkedList.addAtHead(values[i]);
+  //   }
+  //   return linkedList;
+  // }
 
-  // findNodeInList
-  findNodeInList(data) {
+  // findSpecficData
+  findSpecficData(data) {
     // iterate list
     let currentNode = this.head
     let counter = 0;
@@ -24,6 +32,11 @@ class LinkedList {
     }
     // not found
     return -1
+  }
+
+  // findSpecificIndex
+  findSpecificIndex() {
+
   }
 
   // addAtHead
@@ -47,3 +60,11 @@ class LinkedList {
 }
 
 module.exports = LinkedList;
+
+LinkedList.createListFromValues = function (...values) {
+  const linkedList = new LinkedList();
+  for (let i = values.length - 1; i >= 0; i--) {
+    linkedList.addAtHead(values[i]);
+  }
+  return linkedList;
+}

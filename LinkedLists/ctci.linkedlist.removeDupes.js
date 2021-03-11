@@ -1,12 +1,9 @@
 const util = require('util')
 const LinkedList = require('./LinkedList');
 
-const list = new LinkedList
-list.addAtHead(300)
-list.addAtHead(200)
-list.addAtHead(100)
-console.log(util.inspect(list, false, null, true /* enable colors */))
+const listMadeFromValues = LinkedList.createListFromValues(10, 20, 30, 40, 50)
 
+console.log(util.inspect(listMadeFromValues, false, null, true))
 
 // Remove Dupes (2.1)
 
