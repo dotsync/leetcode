@@ -3,7 +3,7 @@ const LinkedList = require('./LinkedList');
 // Remove Dupes (2.1)
 
 // Sets up the initial problem with a custom test case
-const customTestCase = [10, 10, 20, 30, 40]
+const customTestCase = [10, 10, 20, 30, 10, 40]
 const duplicates = LinkedList.createListFromValues(...customTestCase)
 // Prints the unsolved problem
 duplicates.printList()

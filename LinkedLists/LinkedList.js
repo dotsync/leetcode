@@ -97,7 +97,28 @@ class LinkedList {
   }
   removeDupes() {
     // 2.1 remove all duplicates from the linked list
-
+    if (this.length <= 1) return this.list;
+    let currentNode = this.head;
+    let alreadySeen = {};
+    // add first element so checker can check in front
+    alreadySeen[currentNode.data] = true
+    while (currentNode.next !== null) {
+      // if not seen
+      if (alreadySeen[currentNode.next.data]) {
+        // else is seen so delete current
+        // grab previous
+        let next = currentNode.next.next;
+        console.log('next', next)
+        currentNode.setNextNode(next);
+        currentNode = next;
+      } else {
+        // add to hash
+        alreadySeen[currentNode.next.data] = true;
+        currentNode = currentNode.getNextNode();
+      }
+    }
+    console.log(alreadySeen)
+    this.printList(true)
   }
 }
 
