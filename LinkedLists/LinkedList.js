@@ -27,8 +27,16 @@ class LinkedList {
   }
 
   // findSpecificIndex
-  findSpecificIndex() {
-
+  findSpecificIndex(index) {
+    if (index <= -1 || index >= this.length) return null;
+    let currentNode = this.head;
+    if (index === 0) return currentNode.data
+    let counter = 0;
+    while (counter < index) {
+      currentNode = currentNode.getNextNode();
+      counter++;
+    }
+    return currentNode.data
   }
 
   // addAtHead
@@ -47,7 +55,7 @@ class LinkedList {
   // addAtTail
   // addAtIndex
   // deleteAtIndex
-  // print
+  // printList
 
 }
 

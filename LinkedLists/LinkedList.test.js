@@ -8,26 +8,20 @@ describe('Linked List', () => {
   })
   describe('Linked List Methods', () => {
     describe('#findSpecificIndex', () => {
-      describe('with index less than 0', () => {
-        test('should return null', () => {
-          const list = LinkedList.createListFromValues(10, 20, 30, 40)
-          expect(list.findSpecificIndex(-1)).toBeNull();
-        })
+      test('should return null with index less than 0', () => {
+        const list = LinkedList.createListFromValues(10, 20, 30, 40)
+        expect(list.findSpecificIndex(-1)).toBeNull();
       })
-      describe('with index greater than length of list', () => {
-        test('should return null', () => {
-          const list = LinkedList.createListFromValues(10, 20, 30, 40)
-          expect(list.findSpecificIndex(4)).toBeNull();
-        })
+      test('should return null with index greater than length of list', () => {
+        const list = LinkedList.createListFromValues(10, 20, 30, 40)
+        expect(list.findSpecificIndex(4)).toBeNull();
       })
-      describe('with index in range', () => {
-        test('should return the nodes data', () => {
-          const list = LinkedList.createListFromValues(10, 20, 30, 40)
-          expect(list.findSpecificIndex(0)).toBe(10);
-          expect(list.findSpecificIndex(1)).toBe(20);
-          expect(list.findSpecificIndex(2)).toBe(30);
-          expect(list.findSpecificIndex(3)).toBe(40);
-        })
+      test('should return the nodes data with index in range', () => {
+        const list = LinkedList.createListFromValues(10, 20, 30, 40)
+        expect(list.findSpecificIndex(0)).toBe(10);
+        expect(list.findSpecificIndex(1)).toBe(20);
+        expect(list.findSpecificIndex(2)).toBe(30);
+        expect(list.findSpecificIndex(3)).toBe(40);
       })
     })
     describe('#findSpecficData', () => {
