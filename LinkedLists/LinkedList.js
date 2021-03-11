@@ -11,11 +11,11 @@ class LinkedList {
     // iterate list
     let currentNode = this.head
     let counter = 0;
-    while (counter <= this.length) {
+    while (counter < this.length) {
       // check if current node.data === data
       if (currentNode.data === data) {
         // return the node
-        currentNode.data === data
+        return counter
       }
       // update current to be curr.next
       currentNode = currentNode.getNextNode();

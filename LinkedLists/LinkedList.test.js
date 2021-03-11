@@ -25,6 +25,20 @@ describe('Linked List', () => {
       })
     })
     describe('#findSpecficData', () => {
+      test('should return -1 when no data is present in list', () => {
+        const list = LinkedList.createListFromValues('hello', 'world', 'is', 'anyone', 'there')
+        expect(list.findSpecficData('random')).toBe(-1);
+      })
+      test('should return the index at which the data is found', () => {
+        const list = LinkedList.createListFromValues('hello', 'world', 'is', 'anyone', 'there')
+        expect(list.head.data).toBe('hello');
+        expect(list.findSpecficData('hello')).toBe(0);
+        expect(list.findSpecficData('world')).toBe(1);
+        expect(list.findSpecficData('is')).toBe(2);
+        expect(list.findSpecficData('anyone')).toBe(3);
+        expect(list.findSpecficData('there')).toBe(4);
+      })
+
 
     })
     describe('#addAtHead', () => {
