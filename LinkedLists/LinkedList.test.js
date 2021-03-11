@@ -91,7 +91,6 @@ describe('Linked List', () => {
         const list = LinkedList.createListFromValues(10, 20, 40, 50)
         expect(list.addAtIndex(2, 30)).toBe(2)
         expect(list.length).toBe(5)
-        list.printList()
       })
 
     })
