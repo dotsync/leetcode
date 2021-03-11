@@ -75,8 +75,8 @@ class LinkedList {
     }
     const prev = this.findSpecificIndex(index - 1)
     const next = prev.getNextNode()
-    prev.next = new Node(data);
-    prev.next.next = next
+    prev.setNextNode(new Node(data));
+    prev.next.setNextNode(next)
     this.length++;
     return index;
   }
@@ -97,6 +97,7 @@ class LinkedList {
   }
   removeDupes() {
     // 2.1 remove all duplicates from the linked list
+
   }
 }
 
