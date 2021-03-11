@@ -94,11 +94,19 @@ describe('Linked List', () => {
       })
 
     })
-    describe('#deleteAtIndex', () => {
-
-    })
-    describe('#printList', () => {
-
+    describe('#removeDupes', () => {
+      test('should delete all the duplicate letters', () => {
+        const list = LinkedList.createListFromValues('a', 'b', 'a', 'a', 'c', 'b');
+        const expected = LinkedList.createListFromValues('a', 'b', 'c');
+        expect(JSON.stringify(list.removeDupes())).toBe(JSON.stringify(expected.head));
+        expect(list.length).toBe(3);
+      })
+      test('should delete all the duplicate numbers', () => {
+        const list = LinkedList.createListFromValues(99, 1, 6, 1, 1, 43, 2, 2, 99);
+        const expected = LinkedList.createListFromValues(99, 1, 6, 43, 2);
+        expect(JSON.stringify(list.removeDupes())).toBe(JSON.stringify(expected.head));
+        expect(list.length).toBe(5);
+      })
     })
 
   })

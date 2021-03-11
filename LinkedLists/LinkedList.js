@@ -97,28 +97,41 @@ class LinkedList {
   }
   removeDupes() {
     // 2.1 remove all duplicates from the linked list
-    if (this.length <= 1) return this.list;
-    let currentNode = this.head;
-    let alreadySeen = {};
-    // add first element so checker can check in front
-    alreadySeen[currentNode.data] = true
-    while (currentNode.next !== null) {
-      // if not seen
-      if (alreadySeen[currentNode.next.data]) {
-        // else is seen so delete current
-        // grab previous
-        let next = currentNode.next.next;
-        console.log('next', next)
-        currentNode.setNextNode(next);
-        currentNode = next;
+    // if (this.length <= 1) return this.list;
+    // let currentNode = this.head;
+    // let alreadySeen = {};
+    // // add first element so checker can start checking next first
+    // alreadySeen[currentNode.data] = true
+    // let counter = 1;
+    // while (currentNode.next !== null) {
+    //   // if seen
+    //   if (alreadySeen[currentNode.next.data]) {
+    //     // is seen so delete current and grab previous
+    //     let next = currentNode.next.next;
+    //     currentNode.setNextNode(next);
+    //     currentNode = next;
+    //     this.length--;
+    //   } else {
+    //     // else not seen so add to hash
+    //     alreadySeen[currentNode.next.data] = true;
+    //     currentNode = currentNode.getNextNode();
+    //   }
+    // }
+    // return this.head
+    const alreadySeen = {};
+    let prev = null;
+    let currentNode = this.head
+    while (currentNode !== null) {
+      if (alreadySeen[currentNode.data]) {
+        prev.next = currentNode.next;
+        this.length--;
       } else {
-        // add to hash
-        alreadySeen[currentNode.next.data] = true;
-        currentNode = currentNode.getNextNode();
+        alreadySeen[currentNode.data] = true;
+        prev = currentNode;
       }
+      currentNode = currentNode.next;
     }
-    console.log(alreadySeen)
-    this.printList(true)
+    return this.head;
   }
 }
 
