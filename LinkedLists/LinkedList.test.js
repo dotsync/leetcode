@@ -75,6 +75,21 @@ describe('Linked List', () => {
       })
     })
     describe('#addAtIndex', () => {
+      test('should addToHead when the index is less than 0', () => {
+        const list = LinkedList.createListFromValues(20, 30, 40)
+        expect(list.addAtIndex(-1, 10)).toBe(0);
+        expect(list.head.data).toBe(10)
+        expect(list.length).toBe(4)
+      })
+      test('should addToTail when the index is greater than length of list', () => {
+        const list = LinkedList.createListFromValues(10, 20, 30, 40)
+        expect(list.addAtIndex(4, 50)).toBe(4);
+        expect(list.addAtIndex(100, 60)).toBe(5);
+        expect(list.length).toBe(6)
+      })
+      test('should return the index the data was inserted when the index is in range', () => {
+        const list = LinkedList.createListFromValues(10, 20, 40, 50)
+      })
 
     })
     describe('#deleteAtIndex', () => {

@@ -54,7 +54,13 @@ class LinkedList {
   }
   // addAtTail
   addAtTail(data) {
-    if (this.length === 0) this.addAtHead(data);
+    if (this.length === 0) return this.addAtHead(data);
+    let currentNode = this.head;
+    while (currentNode.next !== null) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = new Node(data);
+    this.length++;
   }
   // addAtIndex
   // deleteAtIndex
