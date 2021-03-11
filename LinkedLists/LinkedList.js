@@ -53,6 +53,9 @@ class LinkedList {
     this.length++;
   }
   // addAtTail
+  addAtTail(data) {
+    if (this.length === 0) this.addAtHead(data);
+  }
   // addAtIndex
   // deleteAtIndex
   // printList
