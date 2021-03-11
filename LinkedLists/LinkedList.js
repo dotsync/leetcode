@@ -1,4 +1,5 @@
 const Node = require('./Node');
+const util = require('util')
 
 class LinkedList {
   constructor() {
@@ -81,7 +82,7 @@ class LinkedList {
   }
   // printList
   printList(fullSkeleton) {
-    if (fullSkeleton) return console.log(util.inspect(this.list, false, null, true))
+    if (fullSkeleton) return console.log(util.inspect(this.head, false, null, true))
     let output = 'HEAD->'
     let currentNode = this.head
     while (currentNode.next !== null) {
@@ -94,7 +95,9 @@ class LinkedList {
 
     ------- Print Complete -------`)
   }
-
+  removeDupes() {
+    // 2.1 remove all duplicates from the linked list
+  }
 }
 
 LinkedList.createListFromValues = function (...values) {
