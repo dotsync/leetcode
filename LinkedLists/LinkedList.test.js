@@ -38,8 +38,6 @@ describe('Linked List', () => {
         expect(list.findSpecficData('anyone')).toBe(3);
         expect(list.findSpecficData('there')).toBe(4);
       })
-
-
     })
     describe('#addAtHead', () => {
       // add first item to list at head
@@ -61,7 +59,20 @@ describe('Linked List', () => {
       })
     })
     describe('#addAtTail', () => {
-
+      test('should addAtHead when the list is empty', () => {
+        const list = new LinkedList;
+        list.addAtTail('firstNode');
+        expect(list.head.data).toBe('firstNode');
+        expect(list.length).toBe(1);
+      })
+      test('should add to the end of the list when there already is a head', () => {
+        const list = LinkedList.createListFromValues(10);
+        list.addAtTail(20);
+        const tail = list.head.next;
+        expect(tail.data).toBe(20);
+        expect(list.length).toBe(2);
+        expect(tail.next).toBeNull();
+      })
     })
     describe('#addAtIndex', () => {
 
