@@ -7,26 +7,7 @@ describe('Linked List', () => {
     expect(list.head).toBeNull();
   })
   describe('Linked List Methods', () => {
-    describe('#addAtHead', () => {
-      // add first item to list at head
-      test('should add data to begining of list when list is empty', () => {
-        const list = new LinkedList;
-        list.addAtHead('first in')
-        expect(list.head.data).toBe('first in');
-      })
-      // add two more items to list at head
-      test('should have the most recently added item at the head and a length of 3', () => {
-        const list = new LinkedList;
-        list.addAtHead('first in')
-        list.addAtHead('second in')
-        const oldHead = list.head;
-        list.addAtHead('third in')
-        expect(list.head.data).toBe('third in');
-        expect(list.length).toBe(3);
-        expect(list.head.next).toBe(oldHead);
-      })
-    })
-    describe('#getByIndex', () => {
+    describe('#findSpecificIndex', () => {
       describe('with index less than 0', () => {
         test('should return null', () => {
           const list = LinkedList.createListFromValues(10, 20, 30, 40)
@@ -49,5 +30,44 @@ describe('Linked List', () => {
         })
       })
     })
+    describe('#findSpecficData', () => {
+
+    })
+    describe('#addAtHead', () => {
+      // add first item to list at head
+      test('should add data to begining of list when list is empty', () => {
+        const list = new LinkedList;
+        list.addAtHead('first in')
+        expect(list.head.data).toBe('first in');
+      })
+      // add two more items to list at head
+      test('should have the most recently added item at the head and a length of 3', () => {
+        const list = new LinkedList;
+        list.addAtHead('first in')
+        list.addAtHead('second in')
+        const oldHead = list.head;
+        list.addAtHead('third in')
+        expect(list.head.data).toBe('third in');
+        expect(list.length).toBe(3);
+        expect(list.head.next).toBe(oldHead);
+      })
+    })
+    describe('#addAtTail', () => {
+
+    })
+    describe('#addAtIndex', () => {
+
+    })
+    describe('#deleteAtIndex', () => {
+
+    })
+    describe('#printList', () => {
+
+    })
+
   })
 })
+  // addAtTail
+  // addAtIndex
+  // deleteAtIndex
+  // print
