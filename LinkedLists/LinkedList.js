@@ -5,14 +5,6 @@ class LinkedList {
     this.head = null;
     this.length = 0;
   }
-  // createListFromValues
-  // createListFromValues(...values) {
-  //   const linkedList = new LinkedList();
-  //   for (let i = values.length - 1; i >= 0; i--) {
-  //     linkedList.addAtHead(values[i]);
-  //   }
-  //   return linkedList;
-  // }
 
   // findSpecficData
   findSpecficData(data) {
@@ -59,8 +51,6 @@ class LinkedList {
 
 }
 
-module.exports = LinkedList;
-
 LinkedList.createListFromValues = function (...values) {
   const linkedList = new LinkedList();
   for (let i = values.length - 1; i >= 0; i--) {
@@ -68,3 +58,5 @@ LinkedList.createListFromValues = function (...values) {
   }
   return linkedList;
 }
+
+module.exports = LinkedList;
