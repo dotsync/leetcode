@@ -18,10 +18,10 @@ describe('Linked List', () => {
       })
       test('should return the nodes data with index in range', () => {
         const list = LinkedList.createListFromValues(10, 20, 30, 40)
-        expect(list.findSpecificIndex(0)).toBe(10);
-        expect(list.findSpecificIndex(1)).toBe(20);
-        expect(list.findSpecificIndex(2)).toBe(30);
-        expect(list.findSpecificIndex(3)).toBe(40);
+        expect(list.findSpecificIndex(0).data).toBe(10);
+        expect(list.findSpecificIndex(1).data).toBe(20);
+        expect(list.findSpecificIndex(2).data).toBe(30);
+        expect(list.findSpecificIndex(3).data).toBe(40);
       })
     })
     describe('#findSpecficData', () => {
@@ -89,6 +89,9 @@ describe('Linked List', () => {
       })
       test('should return the index the data was inserted when the index is in range', () => {
         const list = LinkedList.createListFromValues(10, 20, 40, 50)
+        expect(list.addAtIndex(2, 30)).toBe(2)
+        expect(list.length).toBe(5)
+        list.printList()
       })
 
     })

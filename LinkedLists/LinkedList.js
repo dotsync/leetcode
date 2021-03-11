@@ -30,13 +30,13 @@ class LinkedList {
   findSpecificIndex(index) {
     if (index <= -1 || index >= this.length) return null;
     let currentNode = this.head;
-    if (index === 0) return currentNode.data
+    if (index === 0) return currentNode
     let counter = 0;
     while (counter < index) {
       currentNode = currentNode.getNextNode();
       counter++;
     }
-    return currentNode.data
+    return currentNode
   }
 
   // addAtHead
@@ -63,8 +63,37 @@ class LinkedList {
     this.length++;
   }
   // addAtIndex
-  // deleteAtIndex
+  addAtIndex(index, data) {
+    if (index <= 0) {
+      this.addAtHead(data)
+      return 0
+    }
+    if (index >= this.length - 1) {
+      this.addAtTail(data)
+      return this.length - 1
+    }
+    const prev = this.findSpecificIndex(index - 1)
+    const next = prev.getNextNode()
+    prev.next = new Node(data);
+    prev.next.next = next
+    this.length++;
+    return index;
+  }
   // printList
+  printList(fullSkeleton) {
+    if (fullSkeleton) return console.log(util.inspect(this.list, false, null, true))
+    let output = 'HEAD->'
+    let currentNode = this.head
+    while (currentNode.next !== null) {
+      output += `${currentNode.data} ~~ `
+      currentNode = currentNode.next
+    }
+    console.log(`------- Printing List -------
+
+    ${output}<-TAIL
+
+    ------- Print Complete -------`)
+  }
 
 }
 
