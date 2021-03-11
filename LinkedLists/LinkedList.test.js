@@ -14,18 +14,12 @@ describe('Linked List', () => {
       expect(list.head.data).toBe('first in');
     })
     // add two more items to list at head
-    test('should have the most recently added item at the head', () => {
+    test('should have the most recently added item at the head and a length of 3', () => {
       const list = new LinkedList;
       list.addAtHead('first in')
       list.addAtHead('second in')
       list.addAtHead('third in')
       expect(list.head.data).toBe('third in');
-    })
-    test('should have a length of 3', () => {
-      const list = new LinkedList;
-      list.addAtHead('first in')
-      list.addAtHead('second in')
-      list.addAtHead('third in')
       expect(list.length).toBe(3);
     })
   })
