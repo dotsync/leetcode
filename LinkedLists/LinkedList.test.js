@@ -5,10 +5,7 @@ describe('Linked List', () => {
     test('should be an empty list', () => {
       const list = new LinkedList;
       expect(list.length).toBe(0);
-    })
-    test('should have no head', () => {
-      const list = new LinkedList;
-      expect(list.head).toBe(null);
+      expect(list.head).toBeNull();
     })
     // add first item to list at head
     test('should add data to begining of list when list is empty', () => {

@@ -23,7 +23,7 @@ class LinkedList {
       counter++;
     }
     // not found
-    return 'Unable to find';
+    return -1
   }
 
   // addAtHead
