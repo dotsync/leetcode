@@ -111,22 +111,6 @@ class LinkedList {
   /* (leetcode 206) Reverse Linked List
   Given the head of a singly linked list, reverse the list, and return the reversed list. */
   reverse(head) {
-    // const reversedList = new LinkedList;
-    // let currentNode = head;
-    // while (currentNode !== null) {
-    //   let oldHead = reversedList.head;
-    //   if (oldHead.next === null) {
-    //     oldHead = currentNode;
-    //     oldHead.next = null;
-    //   } else { // head already added
-    //     reversedList.head = currentNode;
-    //     reversedList.head.next = oldHead;
-    //     reversedList.printList(true);
-    //   }
-    //   // move pointer
-    //   currentNode = currentNode.next;
-    // }
-    // reversedList.length = this.length
     let previousNode = null;
     let currentNode = head;
     while (currentNode !== null) {
@@ -137,6 +121,13 @@ class LinkedList {
     }
     return previousNode
   }
+  /* (leetcode 141)
+  Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+  There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+
+  Return true if there is a cycle in the linked list. Otherwise, return false.
+  */
 }
 
 LinkedList.createListFromValues = function (...values) {
