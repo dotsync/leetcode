@@ -89,35 +89,10 @@ class LinkedList {
       output += `${currentNode.data} ~~ `
       currentNode = currentNode.next
     }
-    console.log(`------- Printing List -------
-
-    ${output}<-TAIL
-
-    ------- Print Complete -------`)
+    console.log(`${output}<-TAIL`)
   }
+  // (CTCI 2.1) remove all duplicates from the linked list
   removeDupes() {
-    // 2.1 remove all duplicates from the linked list
-    // if (this.length <= 1) return this.list;
-    // let currentNode = this.head;
-    // let alreadySeen = {};
-    // // add first element so checker can start checking next first
-    // alreadySeen[currentNode.data] = true
-    // let counter = 1;
-    // while (currentNode.next !== null) {
-    //   // if seen
-    //   if (alreadySeen[currentNode.next.data]) {
-    //     // is seen so delete current and grab previous
-    //     let next = currentNode.next.next;
-    //     currentNode.setNextNode(next);
-    //     currentNode = next;
-    //     this.length--;
-    //   } else {
-    //     // else not seen so add to hash
-    //     alreadySeen[currentNode.next.data] = true;
-    //     currentNode = currentNode.getNextNode();
-    //   }
-    // }
-    // return this.head
     const alreadySeen = {};
     let prev = null;
     let currentNode = this.head
@@ -132,6 +107,35 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     return this.head;
+  }
+  /* (leetcode 206) Reverse Linked List
+  Given the head of a singly linked list, reverse the list, and return the reversed list. */
+  reverse(head) {
+    // const reversedList = new LinkedList;
+    // let currentNode = head;
+    // while (currentNode !== null) {
+    //   let oldHead = reversedList.head;
+    //   if (oldHead.next === null) {
+    //     oldHead = currentNode;
+    //     oldHead.next = null;
+    //   } else { // head already added
+    //     reversedList.head = currentNode;
+    //     reversedList.head.next = oldHead;
+    //     reversedList.printList(true);
+    //   }
+    //   // move pointer
+    //   currentNode = currentNode.next;
+    // }
+    // reversedList.length = this.length
+    let previousNode = null;
+    let currentNode = head;
+    while (currentNode !== null) {
+      let nextTemp = currentNode.next;
+      currentNode.next = previousNode;
+      previousNode = currentNode;
+      currentNode = nextTemp;
+    }
+    return previousNode
   }
 }
 
