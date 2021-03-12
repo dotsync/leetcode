@@ -109,6 +109,18 @@ describe('Linked List', () => {
       })
     })
     describe('#reverse', () => {
+      test('should work with an empty list', () => {
+        const list = LinkedList.createListFromValues();
+        const expected = LinkedList.createListFromValues();
+        expect(JSON.stringify(list.reverse(list.head))).toBe(JSON.stringify(expected.head))
+      })
+      test('should work on a list with a single item', () => {
+        const list = LinkedList.createListFromValues(1);
+        const expected = LinkedList.createListFromValues(1);
+        expect(JSON.stringify(list.reverse(list.head))).toBe(JSON.stringify(expected.head))
+      })
+
+
       test('should reverse the list', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 4, 5);
         const expected = LinkedList.createListFromValues(5, 4, 3, 2, 1);
