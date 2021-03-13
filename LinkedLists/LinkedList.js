@@ -128,7 +128,7 @@ class LinkedList {
     let p1 = this.head;
     if (p1 === null) return false
     let p2 = this.head.next;
-    while (p2 !== null || p2.next !== null) {
+    while (p2 !== null) {
       if (p2.next === null) return false
       if (p1 === p2) return true;
       p1 = p1.next
