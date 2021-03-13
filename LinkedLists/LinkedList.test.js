@@ -125,8 +125,13 @@ describe('Linked List', () => {
         expect(JSON.stringify(list.reverse(list.head))).toBe(JSON.stringify(expected.head))
       })
     })
-    describe('#detectCycle', () => {
-
+    describe('#hasCycle', () => {
+      test('should return true because list has a cycle', () => {
+        const cycleList = LinkedList.createListFromValues('the number three', 'points', 'to', 5, 1, 2, 3);
+        // set 3.next to be 5
+        cycleList.head.next.next.next.next.next.next.next = cycleList.head.next.next.next
+        expect(cycleList.hasCycle()).toBe(true)
+      })
     })
     describe('kthToLastWithLength', () => {
       test('should return last node when k is <= 0', () => {
