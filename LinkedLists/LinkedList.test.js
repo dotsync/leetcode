@@ -138,7 +138,6 @@ describe('Linked List', () => {
       })
       test('should return false when there is no cycle in list', () => {
         const list5 = LinkedList.createListFromValues(1, 2, 3, 4, 5)
-        console.log(list5)
         expect(list5.hasCycle()).toBe(false)
       })
 
