@@ -127,6 +127,12 @@ describe('Linked List', () => {
     })
     describe('#hasCycle', () => {
       test('should return false for empty list', () => {
+        const singleCycle = LinkedList.createListFromValues(1)
+        let head = singleCycle.head
+        singleCycle.head.next = head
+        expect(singleCycle.hasCycle()).toBe(true)
+      })
+      test('should return false for empty list', () => {
         const list = new LinkedList;
         expect(list.hasCycle()).toBe(false)
       })
