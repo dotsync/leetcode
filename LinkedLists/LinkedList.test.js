@@ -128,6 +128,33 @@ describe('Linked List', () => {
     describe('#detectCycle', () => {
 
     })
+    describe('kthToLast', () => {
+      test('should return last node when k is <= 0', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLast(-1)).toBe('c');
+        expect(list.kthToLast(-100)).toBe('c');
+        expect(list.kthToLast(0)).toBe('c');
+      })
+      test('should return the head when k is > than the list.length', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLast(7)).toBe(1);
+        expect(list.kthToLast(100)).toBe(1);
+      })
+      test('should return the head when k === list.length', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLast(6)).toBe(1);
+      })
+      test('should return the kth to last element', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLast(6)).toBe(1);
+        expect(list.kthToLast(5)).toBe(2);
+        expect(list.kthToLast(4)).toBe(3);
+        expect(list.kthToLast(3)).toBe('a');
+        expect(list.kthToLast(2)).toBe('b');
+        expect(list.kthToLast(1)).toBe('c');
+      })
+    })
+
 
   })
 })
