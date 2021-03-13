@@ -126,6 +126,10 @@ describe('Linked List', () => {
       })
     })
     describe('#hasCycle', () => {
+      test('should return false for empty list', () => {
+        const list = new LinkedList;
+        expect(list.hasCycle()).toBe(false)
+      })
       test('should return true because list has a cycle', () => {
         const cycleList = LinkedList.createListFromValues('the number three', 'points', 'to', 5, 1, 2, 3);
         // set 3.next to be 5
