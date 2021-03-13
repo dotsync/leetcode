@@ -148,7 +148,7 @@ describe('Linked List', () => {
         expect(cycleList.hasCycle()).toBe(true)
       })
     })
-    describe('kthToLastWithLength', () => {
+    describe('#kthToLastWithLength', () => {
       test('should return last node when k is <= 0', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
         expect(list.kthToLastWithLength(-1)).toBe('c');
@@ -174,7 +174,7 @@ describe('Linked List', () => {
         expect(list.kthToLastWithLength(1)).toBe('c');
       })
     })
-    describe('kthToLastNoLength', () => {
+    describe('#kthToLastNoLength', () => {
       test('should return null when k is <= 0', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
         expect(list.kthToLastNoLength(-1, list.head)).toBeNull()
