@@ -126,8 +126,8 @@ class LinkedList {
   */
   hasCycle() {
     let p1 = this.head;
+    if (p1 === null) return false
     let p2 = this.head.next;
-    if (p1 === null || p2 === null) return false;
     while (p2 !== null || p2.next !== null) {
       if (p1 === p2) return true;
       p1 = p1.next
