@@ -128,32 +128,56 @@ describe('Linked List', () => {
     describe('#detectCycle', () => {
 
     })
-    describe('kthToLast', () => {
+    describe('kthToLastWithLength', () => {
       test('should return last node when k is <= 0', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
-        expect(list.kthToLast(-1)).toBe('c');
-        expect(list.kthToLast(-100)).toBe('c');
-        expect(list.kthToLast(0)).toBe('c');
+        expect(list.kthToLastWithLength(-1)).toBe('c');
+        expect(list.kthToLastWithLength(-100)).toBe('c');
+        expect(list.kthToLastWithLength(0)).toBe('c');
       })
       test('should return the head when k is > than the list.length', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
-        expect(list.kthToLast(7)).toBe(1);
-        expect(list.kthToLast(100)).toBe(1);
+        expect(list.kthToLastWithLength(7)).toBe(1);
+        expect(list.kthToLastWithLength(100)).toBe(1);
       })
       test('should return the head when k === list.length', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
-        expect(list.kthToLast(6)).toBe(1);
+        expect(list.kthToLastWithLength(6)).toBe(1);
       })
       test('should return the kth to last element', () => {
         const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
-        expect(list.kthToLast(6)).toBe(1);
-        expect(list.kthToLast(5)).toBe(2);
-        expect(list.kthToLast(4)).toBe(3);
-        expect(list.kthToLast(3)).toBe('a');
-        expect(list.kthToLast(2)).toBe('b');
-        expect(list.kthToLast(1)).toBe('c');
+        expect(list.kthToLastWithLength(6)).toBe(1);
+        expect(list.kthToLastWithLength(5)).toBe(2);
+        expect(list.kthToLastWithLength(4)).toBe(3);
+        expect(list.kthToLastWithLength(3)).toBe('a');
+        expect(list.kthToLastWithLength(2)).toBe('b');
+        expect(list.kthToLastWithLength(1)).toBe('c');
       })
     })
+    describe('kthToLastNoLength', () => {
+      test('should return null when k is <= 0', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLastNoLength(-1, list.head)).toBeNull()
+        expect(list.kthToLastNoLength(-100, list.head)).toBeNull();
+        expect(list.kthToLastNoLength(0, list.head)).toBeNull();
+      })
+      test('should return the head when k is > than the list.length', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        expect(list.kthToLastNoLength(7, list.head)).toBeNull();
+        expect(list.kthToLastNoLength(100, list.head)).toBeNull();;
+      })
+      test('should return the kth to last element', () => {
+        const list = LinkedList.createListFromValues(1, 2, 3, 'a', 'b', 'c');
+        // expect(list.kthToLastNoLength(6, list.head)).toBe(1);
+        expect(list.kthToLastNoLength(5, list.head)).toBe(2);
+        expect(list.kthToLastNoLength(4, list.head)).toBe(3);
+        expect(list.kthToLastNoLength(3, list.head)).toBe('a');
+        expect(list.kthToLastNoLength(2, list.head)).toBe('b');
+        expect(list.kthToLastNoLength(1, list.head)).toBe('c');
+      })
+
+    })
+
 
 
   })
