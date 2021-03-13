@@ -126,7 +126,7 @@ describe('Linked List', () => {
       })
     })
     describe('#hasCycle', () => {
-      test('should return false for empty list', () => {
+      test('should return true for a list with cycle', () => {
         const singleCycle = LinkedList.createListFromValues(1)
         let head = singleCycle.head
         singleCycle.head.next = head
@@ -136,6 +136,12 @@ describe('Linked List', () => {
         const list = new LinkedList;
         expect(list.hasCycle()).toBe(false)
       })
+      test('should return false when there is no cycle in list', () => {
+        const list5 = LinkedList.createListFromValues(1, 2, 3, 4, 5)
+        console.log(list5)
+        expect(list5.hasCycle()).toBe(false)
+      })
+
       test('should return true because list has a cycle', () => {
         const cycleList = LinkedList.createListFromValues('the number three', 'points', 'to', 5, 1, 2, 3);
         // set 3.next to be 5
