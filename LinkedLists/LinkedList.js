@@ -128,6 +128,20 @@ class LinkedList {
 
   Return true if there is a cycle in the linked list. Otherwise, return false.
   */
+
+  /* (CTCI 2.2) Return Kth to last element */
+  kthToLast(k) {
+    let currentNode = this.head;
+    // cut off extra k length to return first or last node
+    if (k > this.length) k = this.length;
+    if (k <= 0) k = 1;
+    let distanceFromHead = this.length - k - 1;
+    while (distanceFromHead >= 0 && currentNode.next !== null) {
+      currentNode = currentNode.next;
+      distanceFromHead--;
+    }
+    return currentNode.data
+  }
 }
 
 LinkedList.createListFromValues = function (...values) {
