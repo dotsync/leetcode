@@ -17,3 +17,5 @@ const uRLify = (string, shortLength) => {
   };
   return arr.join('');
 };
+
+module.exports = uRLify;
