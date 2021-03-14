@@ -1,6 +1,7 @@
 const isOneAway = require('./ctci.strings.isOneAway');
 const uRLify = require('./ctci.strings.uRLify');
 const stringCompression = require('./ctci.strings.stringCompression')
+const permutationIsPalindrome = require('./ctci.strings.permutationIsPalindrome')
 
 describe('Strings', () => {
   describe('Cracking The Coding Interview', () => {
@@ -27,14 +28,10 @@ describe('Strings', () => {
       })
     })
     describe('permutationIsPalindrome()', () => {
-      // const tester = (actual, expected) => {
-      //   if (actual === expected) console.log('passed');
-      //   else console.log('failed');
-      // };
-      // tester(permutationsIsPalindrome('TactCoa'), true);
-      // tester(permutationsIsPalindrome('!Tact Coa'), true);
-      // tester(permutationsIsPalindrome('!Tactt Coa'), false);
-      // tester(permutationsIsPalindrome('!Tacttt Coa'), true);
+      expect(permutationIsPalindrome('TactCoa')).toBe(true)
+      expect(permutationIsPalindrome('!Tact Coa')).toBe(true)
+      expect(permutationIsPalindrome('!Tactt Coa')).toBe(false)
+      expect(permutationIsPalindrome('!Tacttt Coa')).toBe(true)
     })
 
     describe('isPermutation()', () => {
