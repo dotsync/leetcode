@@ -1,8 +1,9 @@
 const isOneAway = require('./ctci.strings.isOneAway');
 const uRLify = require('./ctci.strings.uRLify');
-const stringCompression = require('./ctci.strings.stringCompression')
-const permutationIsPalindrome = require('./ctci.strings.permutationIsPalindrome')
-const isPermutation = require('./ctci.strings.isPermutation')
+const stringCompression = require('./ctci.strings.stringCompression');
+const permutationIsPalindrome = require('./ctci.strings.permutationIsPalindrome');
+const isPermutation = require('./ctci.strings.isPermutation');
+const isUniqueString = require('./ctci.strings.isUniqueString');
 
 describe('Strings', () => {
   describe('Cracking The Coding Interview', () => {
@@ -29,18 +30,24 @@ describe('Strings', () => {
       })
     })
     describe('permutationIsPalindrome()', () => {
-      expect(permutationIsPalindrome('TactCoa')).toBe(true)
-      expect(permutationIsPalindrome('!Tact Coa')).toBe(true)
-      expect(permutationIsPalindrome('!Tactt Coa')).toBe(false)
-      expect(permutationIsPalindrome('!Tacttt Coa')).toBe(true)
+      test('should return true if one change will result in a palindrome', () => {
+        expect(permutationIsPalindrome('TactCoa')).toBe(true)
+        expect(permutationIsPalindrome('!Tact Coa')).toBe(true)
+        expect(permutationIsPalindrome('!Tactt Coa')).toBe(false)
+        expect(permutationIsPalindrome('!Tacttt Coa')).toBe(true)
+      })
     })
     describe('isPermutation()', () => {
-      expect(isPermutation('hello', 'olhel')).toBe(true)
-      expect(isPermutation('hello', 'nadda')).toBe(false)
+      test('should return true is string 1 is a permutation of string 2', () => {
+        expect(isPermutation('hello', 'olhel')).toBe(true)
+        expect(isPermutation('hello', 'nadda')).toBe(false)
+      })
     })
     describe('isUniqueString()', () => {
-      // console.log(isUniqueString('hello')) // false
-      // console.log(isUniqueString('help')) // true
+      test('should return true if string has all unique chars', () => {
+        expect(isUniqueString('hello')).toBe(false)
+        expect(isUniqueString('help')).toBe(true)
+      })
     })
   })
 })
