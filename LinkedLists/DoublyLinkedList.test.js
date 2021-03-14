@@ -40,7 +40,6 @@ describe('Doubly Linked List', () => {
       test('should work for a large input', () => {
         const doublyLinkedList = DoublyLinkedList.createListFromValues(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         // [head = 1] <-> [2] <-> [3] <-> [4] <-> [5].... <-> [tail = 10]
-        doublyLinkedList.printList()
         expect(doublyLinkedList.head.data).toBe(1)
         expect(doublyLinkedList.tail.data).toBe(10)
         expect(doublyLinkedList.length).toBe(10)

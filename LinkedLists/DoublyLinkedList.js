@@ -19,6 +19,9 @@ class DoublyLinkedList {
     this.length++;
     if (this.tail === null) this.tail = newHead
   }
+  // #addToTail
+  // #addAtIndex
+  // #printList
   printList() {
     let currentNode = this.head;
     let output = '<head> ';
@@ -29,11 +32,8 @@ class DoublyLinkedList {
     output += '<tail>';
     console.log(output);
   }
-  // #addToTail
-  // #addAtIndex
   // #findSpecificIndex
   // #findSpecificData
-  // #printList
 }
 
 DoublyLinkedList.createListFromValues = function (...values) {
