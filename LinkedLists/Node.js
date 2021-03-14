@@ -15,7 +15,7 @@ class Node {
     if (node instanceof Node || node === null) this.next = node;
     else throw new Error('Unable to use method setNextNode because the input is not a node instance or the node is not null');
   }
-  setPreviousNode() {
+  setPreviousNode(node) {
     if (node instanceof Node || node === null) this.prev = node;
     else throw new Error('Unable to use method setPreviousNoce because the input is not a node instance or the node is not null')
   }
