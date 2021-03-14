@@ -18,3 +18,5 @@ function stringCompression(string) {
   if (result.length > string.length) return string
   else return result
 }
+
+module.exports = stringCompression
