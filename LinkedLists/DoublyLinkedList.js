@@ -9,25 +9,39 @@ class DoublyLinkedList {
   // methods
   // #addToHead
   addToHead(data) {
-    const newHead = new Node(data);
-    const currentHead = this.head
-    if (currentHead === null) {
-      this.head = newHead
-      this.head.setNextNode(this.tail)
-      this.length++
-    } else { // there is already a head
-      const oldHead = currentHead
-      this.head = newHead
-      this.head.setNextNode(oldHead)
-      oldHead.setPreviousNode(this.head)
-      this.length++
+    const newHead = new Node(data)
+    const currentHead = this.head;
+    if (currentHead !== null) {
+      currentHead.setPreviousNode(newHead);
+      newHead.setNextNode(currentHead);
     }
+    this.head = newHead;
+    this.length++;
+    if (this.tail === null) this.tail = newHead
+  }
+  printList() {
+    let currentNode = this.head;
+    let output = '<head> ';
+    while (currentNode !== null) {
+      output += currentNode.data + ' ';
+      currentNode = currentNode.getNextNode();
+    }
+    output += '<tail>';
+    console.log(output);
   }
   // #addToTail
   // #addAtIndex
   // #findSpecificIndex
   // #findSpecificData
   // #printList
+}
+
+DoublyLinkedList.createListFromValues = function (...values) {
+  const doublyLinkedList = new DoublyLinkedList();
+  for (let i = values.length - 1; i >= 0; i--) {
+    doublyLinkedList.addToHead(values[i]);
+  }
+  return doublyLinkedList;
 }
 
 
