@@ -17,13 +17,11 @@ describe('Doubly Linked List', () => {
         const doublyLinkedList = new DoublyLinkedList;
         doublyLinkedList.addToHead(1);
         expect(doublyLinkedList.head.data).toBe(1);
-        expect(doublyLinkedList.head.next).toStrictEqual(doublyLinkedList.tail);
+        expect(doublyLinkedList.head.next).toBeNull();
         expect(doublyLinkedList.head.prev).toBeNull();
-        expect(doublyLinkedList.tail.next).toBeNull();
-        expect(doublyLinkedList.tail.prev).toStrictEqual(doublyLinkedList.head);
+        expect(doublyLinkedList.tail).toBeNull();
         expect(doublyLinkedList.length).toBe(1);
       })
-
       // adding when list is not empty
     })
     // #addToTail
