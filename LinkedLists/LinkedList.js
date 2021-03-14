@@ -167,14 +167,21 @@ class LinkedList {
   }
   /* (leetcode 21) Merge 2 sorted linked lists*/
   mergeTwoSortedLists(list1, list2) {
-    // modify and return list2
-    // create pointers to each lists head
-    // p2 is longer one
-    // while (p2 !== null)
-    // if p1 is greater than p2
-    // p2 is the head
+    let preHead = new Node(-1)
+    let prev = preHead
 
-    return list2
+    while (list1 != null && list2 !== null) {
+      if (list1.data <= list2.data) {
+        prev.next = list1;
+        list1 = list1.next
+      } else {
+        prev.next = list2
+        list2 = list2.next
+      }
+      prev = prev.next
+    }
+    prev.next = list1 === null ? list2 : list1;
+    return preHead.next
   }
 }
 
