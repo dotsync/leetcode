@@ -174,8 +174,7 @@ class LinkedList {
     // if p1 is greater than p2
     // p2 is the head
 
-
-
+    return list2
   }
 }
 

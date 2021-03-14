@@ -200,43 +200,42 @@ describe('Linked List', () => {
       test('should return empty list if both list are empty', () => {
         const list1 = new LinkedList;
         const list2 = new LinkedList;
-        expect(list1.mergeTwoSortedLists(list1, list2)).toBe(list2);
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(new LinkedList);
       })
       test('should work with small lists', () => {
         const list1 = LinkedList.createListFromValues(1)
         const list2 = LinkedList.createListFromValues(2)
         const expected = LinkedList.createListFromValues(1, 2)
-        expect(list1.mergeTwoSortedLists(list1, list2)).toBe(expected.printList(false, true))
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(expected)
       })
-      // test('should return list2 if list1 is empty', () => {
-      //   const list1 = new LinkedList;
-      //   const list2 = LinkedList.createListFromValues(1, 3, 4);
-      //   expect(list1.mergeTwoSortedLists(list1, list2)).toBe(list2)
-      // })
-      // test('should return list1 if list2 is empty', () => {
-      //   const list1 = LinkedList.createListFromValues(1, 3, 4);
-      //   const list2 = new LinkedList;
-      //   expect(list1.mergeTwoSortedLists(list1, list2)).toBe(list1)
-      // })
-
-      // test('should merge two sorted lists of equal length', () => {
-      //   const list1 = LinkedList.createListFromValues(1, 2, 4);
-      //   const list2 = LinkedList.createListFromValues(1, 3, 4);
-      //   const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4);
-      //   expect(list1.mergeTwoSortedLists(list1, list2)).toBe(expected);
-      // })
-      // test('should merge two sorted lists where list2 is larger', () => {
-      //   const list1 = LinkedList.createListFromValues(1, 2, 4);
-      //   const list2 = LinkedList.createListFromValues(1, 3, 4, 5);
-      //   const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4, 5);
-      //   expect(list1.mergeTwoSortedLists(list1, list2)).toBe(expected);
-      // })
-      // test('should merge two sorted lists where list2 is smaller', () => {
-      //   const list1 = LinkedList.createListFromValues(1, 2, 4, 5);
-      //   const list2 = LinkedList.createListFromValues(1, 3, 4);
-      //   const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4, 5);
-      //   expect(list1.mergeTwoSortedLists(list1, list2)).toBe(expected);
-      // })
+      test('should return list2 if list1 is empty', () => {
+        const list1 = new LinkedList;
+        const list2 = LinkedList.createListFromValues(1, 3, 4);
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(list2)
+      })
+      test('should return list1 if list2 is empty', () => {
+        const list1 = LinkedList.createListFromValues(1, 3, 4);
+        const list2 = new LinkedList;
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(list1)
+      })
+      test('should merge two sorted lists of equal length', () => {
+        const list1 = LinkedList.createListFromValues(1, 2, 4);
+        const list2 = LinkedList.createListFromValues(1, 3, 4);
+        const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4);
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(expected);
+      })
+      test('should merge two sorted lists where list2 is larger', () => {
+        const list1 = LinkedList.createListFromValues(1, 2, 4);
+        const list2 = LinkedList.createListFromValues(1, 3, 4, 5);
+        const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4, 5);
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(expected);
+      })
+      test('should merge two sorted lists where list2 is smaller', () => {
+        const list1 = LinkedList.createListFromValues(1, 2, 4, 5);
+        const list2 = LinkedList.createListFromValues(1, 3, 4);
+        const expected = LinkedList.createListFromValues(1, 1, 2, 3, 4, 4, 5);
+        expect(list1.mergeTwoSortedLists(list1, list2)).toStrictEqual(expected);
+      })
     })
 
 
