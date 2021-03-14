@@ -9,4 +9,11 @@ describe('Doubly Linked List', () => {
     expect(doublyLinkedList.tail).toBeNull();
   })
   // methods
+  // #addToHead
+  // #addToTail
+  // #addAtIndex
+  // #findSpecificIndex
+  // #findSpecificData
+  // #printList
 })
+
