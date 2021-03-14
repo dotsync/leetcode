@@ -164,6 +164,11 @@ class LinkedList {
     if (p2 === null) return null
     else return p2.data
   }
+  /* (leetcode 21) Merge 2 sorted linked lists*/
+  mergeTwoSortedLists(list1, list2) {
+    // modify and return list2
+    return list2
+  }
 }
 
 LinkedList.createListFromValues = function (...values) {
