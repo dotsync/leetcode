@@ -1,5 +1,3 @@
-// Palindrome Permutation (1.4)
-
 const permutationsIsPalindrome = string => {
   const removeSpecials = (lowerCaseString) => {
     const specials = [' ', '!']
@@ -31,6 +29,9 @@ const permutationsIsPalindrome = string => {
   if (oddCharsOut.length > 1) return false;
   else return true;
 }
+
+module.exports = permutationsIsPalindrome;
+
 // const tester = (actual, expected) => {
 //   if (actual === expected) console.log('passed');
 //   else console.log('failed');

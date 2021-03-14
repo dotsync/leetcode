@@ -7,5 +7,8 @@ const isUniqueString = string => {
   }
   return true;
 }
+
+module.exports = isUniqueString;
+
 // console.log(isUniqueString('hello')) // false
 // console.log(isUniqueString('help')) // true
