@@ -203,10 +203,11 @@ describe('Linked List', () => {
         expect(list1.mergeTwoSortedLists(list1, list2)).toBe(list2);
       })
       test('should work with small lists', () => {
-
+        const list1 = LinkedList.createListFromValues(1)
+        const list2 = LinkedList.createListFromValues(2)
+        const expected = LinkedList.createListFromValues(1, 2)
+        expect(list1.mergeTwoSortedLists(list1, list2)).toBe(expected)
       })
-
-
       test('should return list2 if list1 is empty', () => {
         const list1 = new LinkedList;
         const list2 = LinkedList.createListFromValues(1, 3, 4);
