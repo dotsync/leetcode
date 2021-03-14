@@ -17,18 +17,3 @@ const uRLify = (string, shortLength) => {
   };
   return arr.join('');
 };
-
-let actual = uRLify('Mr John Smith    ', 13);
-let expected = 'Mr%20John%20Smith';
-if (actual === expected) {
-  console.log('Passed');
-} else {
-  console.log('failed')
-};
-
-// Time is O(n)
-// Space is O(n) -- I tried O(1) but cannot modify a string in place with javascript as seen below
-let sample = 'test';
-sample[0] = '!';
-console.log(sample === '!est');
-console.log(sample);
