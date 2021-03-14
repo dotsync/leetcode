@@ -1,4 +1,4 @@
-const permutationsIsPalindrome = string => {
+const permutationIsPalindrome = string => {
   const removeSpecials = (lowerCaseString) => {
     const specials = [' ', '!']
     const result = []
@@ -9,7 +9,6 @@ const permutationsIsPalindrome = string => {
     return result.join('');
   };
   let refinedString = removeSpecials(string.toLowerCase())
-  console.log('refinedString', refinedString)
   //iterate through refined string and build hash
   const letterCounts = {};
   for (let i = 0; i < refinedString.length; i++) {
@@ -30,4 +29,4 @@ const permutationsIsPalindrome = string => {
   else return true;
 }
 
-module.exports = permutationsIsPalindrome;
+module.exports = permutationIsPalindrome;
