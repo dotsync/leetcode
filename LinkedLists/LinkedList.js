@@ -81,14 +81,15 @@ class LinkedList {
     return index;
   }
   // printList
-  printList(fullSkeleton) {
+  printList(fullSkeleton, returnTestString) {
     if (fullSkeleton) return console.log(util.inspect(this.head, false, null, true))
     let output = 'HEAD->'
     let currentNode = this.head
     while (currentNode.next !== null) {
-      output += `${currentNode.data} ~~ `
+      output += `${currentNode.data}, `
       currentNode = currentNode.next
     }
+    if (returnTestString) return `${output}`;
     console.log(`${output}<-TAIL`)
   }
   // (CTCI 2.1) remove all duplicates from the linked list
@@ -167,7 +168,14 @@ class LinkedList {
   /* (leetcode 21) Merge 2 sorted linked lists*/
   mergeTwoSortedLists(list1, list2) {
     // modify and return list2
-    return list2
+    // create pointers to each lists head
+    // p2 is longer one
+    // while (p2 !== null)
+    // if p1 is greater than p2
+    // p2 is the head
+
+
+
   }
 }
 
