@@ -29,6 +29,8 @@ function productOfArrayExceptSelf(arr) {
   console.log(arr)
   return arr;
 }
+
+module.exports = productOfArrayExceptSelf;
 // const tester = (actual, expected) => {
 //   if (actual === expected) console.log('passed');
 //   else console.log('failed');

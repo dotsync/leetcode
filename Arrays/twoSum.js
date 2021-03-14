@@ -34,6 +34,8 @@ const twoSum = function (arr, target) {
     }
   }
 }
+
+module.exports = twoSum;
 // time: o(n)
 // space: 0(1)
 

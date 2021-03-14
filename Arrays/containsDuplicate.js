@@ -11,6 +11,8 @@ function containsDuplicates(arr) {
   return false;
 }
 
+module.exports = containsDuplicates;
+
 const tester = (actual, expected) => {
   if (actual === expected) console.log('passed');
   else console.log('failed');

@@ -12,5 +12,8 @@ const tester = (actual, expected) => {
   }
   actual.length === expected.length && console.log('passed')
 }
+
+module.exports = maximumSubarray;
+
 tester(maximumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
 tester(maximumSubarray([-1]), -1);

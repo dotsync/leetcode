@@ -1,4 +1,10 @@
 const bestTimeToBuyAndSellStock = require('./bestTimeToBuyAndSellStock');
+const containsDuplicate = require('./containsDuplicate');
+const maximumSubarray = require('./maximumSubarray');
+const productOfArrayExceptSelf = require('./productOfArrayExceptSelf');
+const twoSum = require('./twoSum');
+
+
 
 describe('Arrays', () => {
   describe('blind75', () => {
