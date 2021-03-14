@@ -9,6 +9,3 @@ const isUniqueString = string => {
 }
 
 module.exports = isUniqueString;
-
-// console.log(isUniqueString('hello')) // false
-// console.log(isUniqueString('help')) // true

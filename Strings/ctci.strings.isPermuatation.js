@@ -15,9 +15,3 @@ const isPermutation = (s1, s2) => {
 }
 
 module.exports = isPermutation;
-
-// const result1 = isPermutation('hello', 'olhel'); // true
-// const result2 = isPermutation('hello', 'nadda'); // false
-// console.log('result1 should be true', result1)
-// console.log('result2 should be false', result2)
-

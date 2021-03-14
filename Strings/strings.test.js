@@ -18,13 +18,34 @@ describe('Strings', () => {
         expect(uRLify('Mr John Smith    ', 13)).toBe('Mr%20John%20Smith')
       })
     })
-    describe('stringCompression', () => {
+    describe('stringCompression()', () => {
       test('should compress the string meaning all repeats are removed and indicated', () => {
         expect(stringCompression('aabcccccaa')).toBe('a2b1c5a2')
       })
       test('should not compress because all letters are different ', () => {
         expect(stringCompression('abc')).toBe('abc')
       })
+    })
+    describe('permutationIsPalindrome()', () => {
+      // const tester = (actual, expected) => {
+      //   if (actual === expected) console.log('passed');
+      //   else console.log('failed');
+      // };
+      // tester(permutationsIsPalindrome('TactCoa'), true);
+      // tester(permutationsIsPalindrome('!Tact Coa'), true);
+      // tester(permutationsIsPalindrome('!Tactt Coa'), false);
+      // tester(permutationsIsPalindrome('!Tacttt Coa'), true);
+    })
+
+    describe('isPermutation()', () => {
+      // const result1 = isPermutation('hello', 'olhel'); // true
+      // const result2 = isPermutation('hello', 'nadda'); // false
+      // console.log('result1 should be true', result1)
+      // console.log('result2 should be false', result2)
+    })
+    describe('isUniqueString()', () => {
+      // console.log(isUniqueString('hello')) // false
+      // console.log(isUniqueString('help')) // true
     })
   })
 })
