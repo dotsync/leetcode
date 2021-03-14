@@ -89,7 +89,7 @@ class LinkedList {
       output += `${currentNode.data}, `
       currentNode = currentNode.next
     }
-    if (returnTestString) return `${output}`;
+    if (returnTestString) return `${util.inspect(this.head, false, null, true)}`;
     console.log(`${output}<-TAIL`)
   }
   // (CTCI 2.1) remove all duplicates from the linked list
