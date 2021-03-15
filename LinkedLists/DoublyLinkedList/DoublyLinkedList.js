@@ -20,6 +20,17 @@ class DoublyLinkedList {
     if (this.tail === null) this.tail = newHead
   }
   // #addToTail
+  addToTail(data) {
+    const newTail = new LinkedListNode(data);
+    const currentTail = this.tail;
+    if (currentTail) {
+      currentTail.setNextNode(newTail);
+      newTail.setPreviousNode(currentTail);
+    }
+    this.tail = newTail;
+    this.length++;
+    if (!this.head) this.head = newTail
+  }
   // #addAtIndex
   // #printList
   printList() {
