@@ -6,14 +6,5 @@ const maximumSubarray = nums => {
   }
   return maxSum;
 }
-const tester = (actual, expected) => {
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) console.log('failed');
-  }
-  actual.length === expected.length && console.log('passed')
-}
 
 module.exports = maximumSubarray;
-
-tester(maximumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
-tester(maximumSubarray([-1]), -1);
