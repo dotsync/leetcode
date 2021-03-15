@@ -40,9 +40,15 @@ describe('Arrays', () => {
         expect(maximumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toBe(6);
         expect(maximumSubarray([-1])).toBe(-1);
       })
-
     })
-
+    describe('containsDuplicate()', () => {
+      /* Given an array of integers, find if the array contains any duplicates. */
+      test('should return whether or not the array contains duplicate', () => {
+        expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toBe(true);
+        expect(containsDuplicate([1, 2, 3, 1])).toBe(true);
+        expect(containsDuplicate([1, 2, 3, 4])).toBe(false);
+      })
+    })
   })
   describe('Cracking The Coding Interview', () => {
     describe('rotateMatrix', () => {
