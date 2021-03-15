@@ -34,7 +34,12 @@ describe('Arrays', () => {
         expect(twoSum([], 9)).toBe(undefined);
         expect(twoSum([2, 2, 11, 15])).toBe(undefined);
       })
-
+    })
+    describe('maximumSubarray()', () => {
+      test('should return the largest continueous subarray', () => {
+        expect(maximumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toBe(6);
+        expect(maximumSubarray([-1])).toBe(-1);
+      })
 
     })
 
