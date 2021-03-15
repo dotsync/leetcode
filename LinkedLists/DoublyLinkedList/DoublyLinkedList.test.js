@@ -52,9 +52,9 @@ describe('Doubly Linked List', () => {
         doublyLinkedList.addToTail(1);
         expect(doublyLinkedList.tail.data).toBe(1);
         expect(doublyLinkedList.tail.next).toBeNull();
-        expect(doublyLinkedList.tail.prev.prev).toBeNull();
+        expect(doublyLinkedList.head.prev).toBeNull();
         // when adding just one item, and tail is empty. tail and head represent item
-        expect(doublyLinkedList.tail.prev.data).toBe(1);
+        expect(doublyLinkedList.head.data).toBe(1);
         expect(doublyLinkedList.length).toBe(1);
       })
       test('should add to tail when list is not empty', () => {
