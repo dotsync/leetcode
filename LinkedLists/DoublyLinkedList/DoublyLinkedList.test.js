@@ -2,7 +2,7 @@ const DoublyLinkedList = require('./DoublyLinkedList');
 
 
 describe('Doubly Linked List', () => {
-  test('should be instantiated with a head, tail and length', () => {
+  test('should be instantiated with head, tail and length properties', () => {
     const doublyLinkedList = new DoublyLinkedList;
     expect(doublyLinkedList.length).toBe(0);
     expect(doublyLinkedList.head).toBeNull();
