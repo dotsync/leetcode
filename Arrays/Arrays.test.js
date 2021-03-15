@@ -21,6 +21,23 @@ describe('Arrays', () => {
         expect(productOfArrayExceptSelf([1, 2, 3, 4])).toStrictEqual([24, 12, 8, 6]);
       })
     })
+    describe('twoSum()', () => {
+      /* Given an array of integers nums and an integer target,
+      return indices of the two numbers such that they add up to target. */
+      test('should return indices of the two numbers such that they add up to target.', () => {
+        expect(twoSum([2, 7, 11, 15], 9)).toStrictEqual([0, 1]);
+        expect(twoSum([3, 2, 4], 6)).toStrictEqual([1, 2]);
+        expect(twoSum([3, 3], 6)).toStrictEqual([0, 1]);
+      })
+      test('should return empty array if no sum is found', () => {
+        expect(twoSum([2, 2, 11, 15], 9)).toBe(undefined);
+        expect(twoSum([], 9)).toBe(undefined);
+        expect(twoSum([2, 2, 11, 15])).toBe(undefined);
+      })
+
+
+    })
+
   })
   describe('Cracking The Coding Interview', () => {
     describe('rotateMatrix', () => {
