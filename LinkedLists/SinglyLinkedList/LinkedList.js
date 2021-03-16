@@ -183,6 +183,24 @@ class LinkedList {
     prev.next = list1 === null ? list2 : list1;
     return preHead.next
   }
+  // #partition
+  partition(p) {
+    let newHead = this.head;
+    let tail = this.head;
+    while (this.head !== null) {
+      let next = this.head.getNextNode()
+      if (this.head.data > p) {
+        this.head.setNextNode(newHead)
+        newHead = this.head
+      } else {
+        tail.setNextNode(this.head)
+        tail = this.head
+      }
+      this.head = next
+    }
+    tail.next = null;
+    return newHead;
+  }
 }
 
 LinkedList.createListFromValues = function (...values) {
