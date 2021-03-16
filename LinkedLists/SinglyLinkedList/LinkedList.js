@@ -185,6 +185,7 @@ class LinkedList {
   }
   // #partition
   partition(p) {
+    if (this.head === null) return this.head
     let newHead = this.head;
     let tail = this.head;
     while (this.head !== null) {
