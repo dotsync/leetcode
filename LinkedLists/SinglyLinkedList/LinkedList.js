@@ -185,8 +185,8 @@ class LinkedList {
   }
   // #partition
   partition(p) {
-    if (this.head === null) return this.head
     let newHead = this.head;
+    if (newHead === null) return this.head
     let tail = this.head;
     while (this.head !== null) {
       let next = this.head.getNextNode()

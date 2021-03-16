@@ -245,6 +245,13 @@ describe('Linked List', () => {
         const testcase = list.partition(10)
         expect(testcase).toBeNull();
       })
+      test('should divide the list into two halves split by the given partition', () => {
+        const list = LinkedList.createListFromValues(1, 9, 10, 3);
+        const expectedResult = LinkedList.createListFromValues(1, 3, 9, 10);
+        const actualResult = list.partition(5);
+        console.log(actualResult)
+        expect(actualResult.data).toBe(1)
+      })
 
     })
 
