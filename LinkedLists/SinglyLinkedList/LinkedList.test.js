@@ -239,5 +239,14 @@ describe('Linked List', () => {
         expect(list1.mergeTwoSortedLists(list1.head, list2.head)).toStrictEqual(expected.head);
       })
     })
+    describe('#partition', () => {
+      test('should work for empty list', () => {
+        const list = new LinkedList;
+        const testcase = list.partition(10)
+        expect(testcase).toBeNull();
+      })
+
+    })
+
   })
 })
