@@ -7,7 +7,7 @@ class SinglyLinkedListNode {
     return this.next;
   }
   setNextNode(node) {
-    if (node instanceof DoublyLinkedListNode || node === null) this.next = node;
+    if (node instanceof SinglyLinkedListNode || node === null) this.next = node;
     else throw new Error('Unable to use method setNextNode because the input is not a node instance or the node is not null');
   }
 }

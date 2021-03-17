@@ -1,4 +1,4 @@
-const LinkedListNode = require('../LinkedListNode');
+const SinglyLinkedListNode = require('./SinglyLinkedListNode');
 const util = require('util')
 
 class LinkedList {
@@ -42,7 +42,7 @@ class LinkedList {
 
   // addAtHead
   addAtHead(data) {
-    const newHead = new LinkedListNode(data);
+    const newHead = new SinglyLinkedListNode(data);
     const oldHead = this.head;
     // check if there is a head
     if (this.head === null) {
@@ -60,7 +60,7 @@ class LinkedList {
     while (currentNode.next !== null) {
       currentNode = currentNode.next;
     }
-    currentNode.next = new LinkedListNode(data);
+    currentNode.next = new SinglyLinkedListNode(data);
     this.length++;
   }
   // addAtIndex
@@ -75,7 +75,7 @@ class LinkedList {
     }
     const prev = this.findSpecificIndex(index - 1)
     const next = prev.getNextNode()
-    prev.setNextNode(new LinkedListNode(data));
+    prev.setNextNode(new SinglyLinkedListNode(data));
     prev.next.setNextNode(next)
     this.length++;
     return index;
@@ -167,7 +167,7 @@ class LinkedList {
   }
   /* (leetcode 21) Merge 2 sorted linked lists*/
   mergeTwoSortedLists(list1, list2) {
-    let preHead = new LinkedListNode(-1)
+    let preHead = new SinglyLinkedListNode(-1)
     let prev = preHead
 
     while (list1 != null && list2 !== null) {
