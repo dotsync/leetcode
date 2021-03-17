@@ -239,20 +239,37 @@ describe('Linked List', () => {
         expect(list1.mergeTwoSortedLists(list1.head, list2.head)).toStrictEqual(expected.head);
       })
     })
-    describe('#partition', () => {
-      test('should work for empty list', () => {
-        const list = new SinglyLinkedList;
-        const testcase = list.partition(10)
-        expect(testcase).toBeNull();
-      })
-      test('should divide the list into two halves split by the given partition', () => {
-        const list = SinglyLinkedList.createListFromValues(1, 9, 10, 3);
-        const expectedResult = SinglyLinkedList.createListFromValues(1, 3, 9, 10);
-        const actualResult = list.partition(5);
-        console.log(actualResult)
-        expect(actualResult.data).toBe(1)
-      })
+    // describe('#partition', () => {
+    //   test('should work for empty list', () => {
+    //     const list = new SinglyLinkedList;
+    //     const testcase = list.partition(10)
+    //     expect(testcase).toBeNull();
+    //   })
+    //   test('should divide the list into two halves split by the given partition', () => {
+    //     const list = SinglyLinkedList.createListFromValues(1, 9, 10, 3);
+    //     const expectedResult = SinglyLinkedList.createListFromValues(1, 3, 9, 10);
+    //     const actualResult = list.partition(5);
+    //     console.log(actualResult)
+    //     expect(actualResult.data).toBe(1)
+    //   })
+    // })
+    describe('#copyListWithRandomPointer', () => {
+      // Example 1:
+      // Input: head = [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]
+      // Output: [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]
 
+      // Example 2:
+      // Input: head = [[1, 1], [2, 1]]
+      // Output: [[1, 1], [2, 1]]
+
+      // Example 3:
+      // Input: head = [[3, null], [3, 0], [3, null]]
+      // Output: [[3, null], [3, 0], [3, null]]
+
+      // Example 4:
+      // Input: head = []
+      // Output: []
+      // Explanation: The given linked list is empty(null pointer), so return null.
     })
 
   })

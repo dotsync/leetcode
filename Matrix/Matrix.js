@@ -3,11 +3,11 @@ class Matrix {
     this.board = [];
   }
   // createBoard
-  createBoard(rows, cols, filler) {
+  createBoard(cols, rows, filler) {
     // [0, 0, 0]
-    for (let j = 0; j < cols; j++) {
+    for (let j = 0; j < rows; j++) {
       const row = [];
-      for (let i = 0; i < rows; i++) {
+      for (let i = 0; i < cols; i++) {
         row.push(filler)
       }
       this.board.push(row)
