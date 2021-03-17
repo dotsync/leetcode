@@ -1,12 +1,3 @@
-const arrayTester = (actual, expected) => {
-  for (let i = 0; i < actual.length; i++) {
-    for (let j = 0; j < actual.length; j++) {
-      if (actual[i][j] !== expected[i][j]) console.log('failed');
-    }
-  }
-  actual.length === expected.length && console.log('passed')
-}
-
 function rotateMatrix(matrix) {
   const transpose = (m) => {
     for (let i = 0; i < m.length; i++) {
