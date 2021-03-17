@@ -6,6 +6,7 @@ class Matrix {
   createBoard(cols, rows, filler) {
     // [0, 0, 0]
     let random = false
+    // You could use null as a filler
     if (filler === undefined) random = true
     for (let j = 0; j < rows; j++) {
       const row = [];
