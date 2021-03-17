@@ -1,7 +1,7 @@
 const SinglyLinkedListNode = require('./SinglyLinkedListNode');
 const util = require('util')
 
-class LinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
@@ -204,12 +204,12 @@ class LinkedList {
   }
 }
 
-LinkedList.createListFromValues = function (...values) {
-  const linkedList = new LinkedList();
+SinglyLinkedList.createListFromValues = function (...values) {
+  const singlyLinkedList = new SinglyLinkedList();
   for (let i = values.length - 1; i >= 0; i--) {
-    linkedList.addAtHead(values[i]);
+    singlyLinkedList.addAtHead(values[i]);
   }
-  return linkedList;
+  return singlyLinkedList;
 }
 
-module.exports = LinkedList;
+module.exports = SinglyLinkedList;
