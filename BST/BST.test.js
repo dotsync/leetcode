@@ -97,7 +97,19 @@ describe('BinarySearchTree', () => {
         expect(bst.breadthFirstSearch()).toStrictEqual(expected)
       })
     })
-
+    describe('#DFS', () => {
+      /*
+              10
+          6        12
+      5      9  11    15   */
+      describe('Post Order', () => {
+        test('should return values nodes from a tree in post order', () => {
+          const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
+          let expected = [5, 9, 6, 11, 15, 12, 10]
+          expect(bst.postOrderDFS()).toStrictEqual(expected)
+        })
+      })
+    })
   })
 })
 
