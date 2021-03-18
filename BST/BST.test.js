@@ -77,10 +77,12 @@ describe('BinarySearchTree', () => {
       test('should return the node when the data is found', () => {
         const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
         expect(bst.find(9)).toStrictEqual(bst.root.left.right);
+        expect(bst.find(11)).toStrictEqual(bst.root.right.left);
       })
       test('should return -1 if the data is not present in the tree', () => {
         const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
         expect(bst.find(100)).toBe(-1);
+        expect(bst.find(3)).toBe(-1);
       })
     })
   })
