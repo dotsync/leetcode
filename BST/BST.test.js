@@ -85,6 +85,19 @@ describe('BinarySearchTree', () => {
         expect(bst.find(3)).toBe(-1);
       })
     })
+    describe('#BFS', () => {
+      test('should return -1 of given empty tree', () => {
+        const bst = new BinarySearchTree;
+        expect(bst.breadthFirstSearch()).toBe(-1);
+      })
+
+      test('should return a list of values using BFS on a tree', () => {
+        const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
+        let expected = [10, 6, 12, 5, 9, 11, 15]
+        expect(bst.breadthFirstSearch()).toStrictEqual(expected)
+      })
+    })
+
   })
 })
 
