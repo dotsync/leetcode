@@ -30,6 +30,7 @@ class BinarySearchTree {
   }
   // #find
   find(data, currentTreeNode = this.root) {
+    if (currentTreeNode === null) return -1
     if (currentTreeNode.data === data) {
       return currentTreeNode;
     }
