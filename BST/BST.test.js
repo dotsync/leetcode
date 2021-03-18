@@ -60,11 +60,21 @@ describe('BinarySearchTree', () => {
         expect(bst.root.right.data).toBe(12);
         expect(bst.root.right.left.data).toBe(11);
         expect(bst.root.right.right.data).toBe(15);
-        //
-
+      })
+    })
+    describe('#createFromValues', () => {
+      test('should create a bst from a list of values', () => {
+        const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15)
+        expect(bst.root.left.data).toBe(6);
+        expect(bst.root.left.left.data).toBe(5);
+        expect(bst.root.left.right.data).toBe(9);
+        expect(bst.root.right.data).toBe(12);
+        expect(bst.root.right.left.data).toBe(11);
+        expect(bst.root.right.right.data).toBe(15);
       })
 
     })
+
   })
 })
 
