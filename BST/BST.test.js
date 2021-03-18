@@ -125,6 +125,7 @@ describe('BinarySearchTree', () => {
       })
     })
   })
+})
 
 
 /**
