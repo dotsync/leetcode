@@ -71,6 +71,17 @@ class BinarySearchTree {
     }
     return result
   }
+  depthFirstSearch = {
+    postOrder: function () {
+
+    },
+    preOrder: function () {
+
+    },
+    inOrder: function () {
+
+    }
+  }
 }
 
 BinarySearchTree.createFromValues = function (...values) {
