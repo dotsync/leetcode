@@ -50,6 +50,14 @@ class BinarySearchTree {
       }
     }
   }
+  /*
+   * Traversal methods
+        * BFS
+        * DPS
+           - Preorder
+           - Inorder
+           - Postorder
+  */
 }
 
 BinarySearchTree.createFromValues = function (...values) {

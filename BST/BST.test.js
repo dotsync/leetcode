@@ -82,9 +82,7 @@ describe('BinarySearchTree', () => {
         const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
         expect(bst.find(100)).toBe(-1);
       })
-
     })
-
   })
 })
 
@@ -93,5 +91,13 @@ describe('BinarySearchTree', () => {
  * created a BST node class, a BST class and a BST test suite
  * Using Test Driven Development, implemented an INSERT method for BST and built out the test suite
  * Built a method that returns a BST built from given values
- * [TO-DO] Using Test Driven Development, implemented a FIND method for BST and built out the test suite
+ * Using Test Driven Development, implemented a FIND method for BST and built out the test suite
+ * ---- break
+ * ---- break
+ * Traversal methods
+ * BFS
+ * DPS
+ *  - Preorder
+ *  - Inorder
+ *  - Postorder
  */
