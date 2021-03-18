@@ -29,6 +29,27 @@ class BinarySearchTree {
     }
   }
   // #find
+  find(data, currentTreeNode = this.root) {
+    if (currentTreeNode.data === data) {
+      return currentTreeNode;
+    }
+    // search left child
+    if (data < currentTreeNode.data) {
+      if (currentTreeNode !== null) {
+        return this.find(data, currentTreeNode.left)
+      } else { // if null, then could not find
+        return -1
+      }
+    }
+    // search right child
+    if (data > currentTreeNode.data) {
+      if (currentTreeNode.right !== null) {
+        return this.find(data, currentTreeNode.right)
+      } else {
+        return -1
+      }
+    }
+  }
 }
 
 BinarySearchTree.createFromValues = function (...values) {
