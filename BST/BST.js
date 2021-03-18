@@ -1,9 +1,3 @@
-/* NOTES
-Look if you wanna get your coding to the next level, U must learn trees!
-Really exciting day, Building my tree class from scratch. Yesterday showed me that this is a weak point in my shield of knowledge
-Must understand tree rtraversal, graph traversal
-decsions forking time and space are like connections in a graph
-*/
 const BinarySearchTreeNode = require('./BSTNode');
 
 class BinarySearchTree {
@@ -12,7 +6,29 @@ class BinarySearchTree {
   }
   // BST methods
   // insert(data)
-  // remove(data)
+  insert(data, currentTreeNode = this.root) {
+    const newTreeNode = new BinarySearchTreeNode(data);
+    if (currentTreeNode === null) {
+      this.root = newTreeNode;
+      return this;
+    }
+    // search for a place to insert data
+    if (data === currentTreeNode.data) return
+    if (data < currentTreeNode.data) {
+      if (currentTreeNode.left === null) {
+        currentTreeNode.left = newTreeNode
+      } else {
+        return insert(data, currentTreeNode.left)
+      }
+    } else { // (data > currentTreeNode.data)
+      if (currentTreeNode.right === null) {
+        currentTreeNode.right = newTreeNode
+      } else { // keep looking
+        return insert(data, currentTreeNode.right)
+      }
+    }
+  }
 }
+// remove(data)
 
 module.exports = BinarySearchTree;
