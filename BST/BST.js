@@ -71,16 +71,18 @@ class BinarySearchTree {
     }
     return result
   }
-  depthFirstSearch = {
-    postOrder: function () {
 
-    },
-    preOrder: function () {
-
-    },
-    inOrder: function () {
-
+  postOrderDFS() {
+    let result = [];
+    function traverse(currentTreeNode) {
+      if (currentTreeNode !== null) {
+        traverse(currentTreeNode.left)
+        traverse(currentTreeNode.right)
+        result.push(currentTreeNode.data)
+      }
     }
+    traverse(this.root)
+    return result
   }
 }
 
