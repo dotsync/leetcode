@@ -18,16 +18,17 @@ class BinarySearchTree {
       if (currentTreeNode.left === null) {
         currentTreeNode.left = newTreeNode
       } else {
-        return insert(data, currentTreeNode.left)
+        return this.insert(data, currentTreeNode.left)
       }
     } else { // (data > currentTreeNode.data)
       if (currentTreeNode.right === null) {
         currentTreeNode.right = newTreeNode
       } else { // keep looking
-        return insert(data, currentTreeNode.right)
+        return this.insert(data, currentTreeNode.right)
       }
     }
   }
+  // #find
 }
 // remove(data)
 

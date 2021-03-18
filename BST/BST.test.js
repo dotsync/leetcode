@@ -37,6 +37,33 @@ describe('BinarySearchTree', () => {
         expect(bst.root.left).toBeNull();
         expect(bst.root.right).toBeNull();
       })
+      test('should construct a large tree', () => {
+        const bst = new BinarySearchTree;
+        /*
+                    10
+                6        12
+            5      9  11    15   */
+        // root
+        bst.insert(10);
+        expect(bst.root.data).toBe(10);
+        // left
+        bst.insert(6);
+        bst.insert(5);
+        bst.insert(9);
+        expect(bst.root.left.data).toBe(6);
+        expect(bst.root.left.left.data).toBe(5);
+        expect(bst.root.left.right.data).toBe(9);
+        // right
+        bst.insert(12);
+        bst.insert(11);
+        bst.insert(15);
+        expect(bst.root.right.data).toBe(12);
+        expect(bst.root.right.left.data).toBe(11);
+        expect(bst.root.right.right.data).toBe(15);
+        //
+
+      })
+
     })
   })
 })
