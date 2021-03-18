@@ -51,14 +51,26 @@ class BinarySearchTree {
       }
     }
   }
-  /*
-   * Traversal methods
-        * BFS
-        * DPS
-           - Preorder
-           - Inorder
-           - Postorder
-  */
+  breadthFirstSearch() {
+    let currentTreeNode = this.root
+    if (currentTreeNode === null) return -1
+    let result = [];
+    let queue = [currentTreeNode];
+
+    while (queue.length > 0) {
+      // important got stuck here. I was adding the root twice if u dont add the line below
+      // So itts important to dequeue that first item otherwise you are searching the list twice
+      currentTreeNode = queue.shift()
+      if (currentTreeNode.left !== null) {
+        queue.push(currentTreeNode.left)
+      }
+      if (currentTreeNode.right !== null) {
+        queue.push(currentTreeNode.right)
+      }
+      result.push(currentTreeNode.data)
+    }
+    return result
+  }
 }
 
 BinarySearchTree.createFromValues = function (...values) {
