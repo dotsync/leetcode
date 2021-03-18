@@ -7,8 +7,15 @@ describe('BinarySearchTree', () => {
   })
 
   describe('BinarySearchTree Methods', () => {
-
-
+    describe('#insert', () => {
+      test('should insert into an empty tree', () => {
+        const bst = new BinarySearchTree
+        bst.insert(99);
+        expect(bst.root).toBe(99)
+        expect(bst.root.left).toBeNull();
+        expect(bst.root.right).toBeNull();
+      })
+    })
   })
 })
 
