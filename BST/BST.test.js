@@ -72,9 +72,26 @@ describe('BinarySearchTree', () => {
         expect(bst.root.right.left.data).toBe(11);
         expect(bst.root.right.right.data).toBe(15);
       })
+    })
+    describe('#find', () => {
+      test('should return the node when the data is found', () => {
+        const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
+        expect(bst.find(9)).toStrictEqual(bst.root.left.right);
+      })
+      test('should return -1 if the data is not present in the tree', () => {
+        const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
+        expect(bst.find(100)).toBe(-1);
+      })
 
     })
 
   })
 })
 
+
+/**
+ * created a BST node class, a BST class and a BST test suite
+ * Using Test Driven Development, implemented an INSERT method for BST and built out the test suite
+ * Built a method that returns a BST built from given values
+ * [TO-DO] Using Test Driven Development, implemented a FIND method for BST and built out the test suite
+ */
