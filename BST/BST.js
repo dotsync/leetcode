@@ -84,6 +84,18 @@ class BinarySearchTree {
     traverse(this.root)
     return result
   }
+  preOrderDFS() {
+    let result = [];
+    function traverse(currentTreeNode) {
+      if (currentTreeNode !== null) {
+        traverse(currentTreeNode.right)
+        traverse(currentTreeNode.left)
+        result.push(currentTreeNode.data)
+      }
+    }
+    traverse(this.root)
+    return result
+  }
 }
 
 BinarySearchTree.createFromValues = function (...values) {

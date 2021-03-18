@@ -113,14 +113,14 @@ describe('BinarySearchTree', () => {
         test('should return values from a tree in pre order', () => {
           const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
           let expected = [15, 11, 12, 9, 5, 6, 10]
-          expect(bst.postOrderDFS()).toStrictEqual(expected)
+          expect(bst.preOrderDFS()).toStrictEqual(expected)
         })
       })
       describe('In Order', () => {
         test('should return values from a tree in order', () => {
           const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
           let expected = [5, 6, 9, 10, 11, 12, 15]
-          expect(bst.postOrderDFS()).toStrictEqual(expected)
+          expect(bst.inOrderDFS()).toStrictEqual(expected)
         })
       })
     })
