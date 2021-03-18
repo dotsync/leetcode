@@ -30,6 +30,13 @@ class BinarySearchTree {
   }
   // #find
 }
-// remove(data)
+
+BinarySearchTree.createFromValues = function (...values) {
+  const bst = new BinarySearchTree;
+  for (let i = 0; i < values.length; i++) {
+    bst.insert(values[i])
+  }
+  return bst
+}
 
 module.exports = BinarySearchTree;
