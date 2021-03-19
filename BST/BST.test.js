@@ -1,4 +1,5 @@
 const BinarySearchTree = require('./BST');
+const util = require('util')
 
 describe('BinarySearchTree', () => {
   test('should instantiate a root which is equal to null', () => {
@@ -124,6 +125,15 @@ describe('BinarySearchTree', () => {
         })
       })
     })
+    describe('#isSubtree', () => {
+      test('should return true becuase tree2 is subtree of largeTree', () => {
+        const largeTree = BinarySearchTree.createFromValues(3, 5, 4, 6, 2, 1);
+        const tree2 = BinarySearchTree.createFromValues(5, 6, 4);
+        // console.log(util.inspect(tree2, false, null, true));
+        expect(largeTree.isSubtree(tree2)).toBe(true)
+      })
+    })
+
   })
 })
 
