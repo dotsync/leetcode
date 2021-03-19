@@ -1,0 +1,1 @@
+const MinBinaryHeap = require('./MinBinaryHeap')
