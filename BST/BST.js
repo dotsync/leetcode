@@ -108,6 +108,17 @@ class BinarySearchTree {
     traverse(this.root)
     return result
   }
+  isSubtree(t) {
+    function preOrder(node, left) {
+      if (node === null) {
+        return left ? "left-null" : "right-null"
+      }
+      return `#${node.data} ${preOrder(node.left, true)} ${preOrder(node.right, false)}`
+    }
+    const sTree = preOrder(this.root)
+    const tTree = preOrder(t.root)
+    return (sTree.indexOf(tTree) === -1) ? false : true
+  };
 }
 
 BinarySearchTree.createFromValues = function (...values) {
