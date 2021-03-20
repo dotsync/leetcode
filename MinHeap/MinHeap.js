@@ -1,4 +1,4 @@
-class MinBinaryHeap {
+class MinHeap {
   constructor() {
     this.heap = [null];
     this.size = 0;
