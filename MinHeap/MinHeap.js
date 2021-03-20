@@ -1,6 +1,6 @@
 class MinBinaryHeap {
   constructor() {
-    this.queue = [null];
+    this.heap = [null];
     this.size = 0;
   }
 }
