@@ -27,7 +27,51 @@ class MinHeap {
     const min = this.heap.pop();
     this.size--;
     return min;
-  }
-}
 
+    heapify();
+  }
+
+  heapify() {
+    let current = 1;
+    let leftChild = getLeft(current);
+    let rightChild = getRight(current);
+
+    while (this.canSwap(current, leftChild, rightChild)) {
+      while (this.canSwap(current, leftChild, rightChild)) {
+        if (this.exists(leftChild) && this.exists(rightChild)) {
+          if (this.heap[leftChild] < this.heap[rightChild]) {
+            this.swap(current, leftChild);
+            current = leftChild;
+          } else {
+            this.swap(current, rightChild);
+            current = rightChild;
+          }
+        } else {
+          this.swap(current, leftChild);
+          current = leftChild;
+        }
+        leftChild = getLeft(current);
+        rightChild = getRight(current);
+      }
+      leftChild = getLeft(current);
+      rightChild = getRight(current);
+    }
+  }
+
+  exists(index) {
+    return index <= this.size;
+  }
+
+  canSwap(current, leftChild, rightChild) {
+    // Check that one of the possible swap conditions exists
+    return (
+      this.exists(leftChild) && this.heap[current] > this.heap[leftChild]
+      || this.exists(rightChild) && this.heap[current] > this.heap[rightChild]
+    );
+  }
+
+}
+const getParent = current => Math.floor((current / 2));
+const getLeft = current => current * 2;
+const getRight = current => current * 2 + 1;
 module.exports = MinHeap;

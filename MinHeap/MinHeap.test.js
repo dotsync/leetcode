@@ -24,7 +24,6 @@ describe('MinHeap', () => {
         minHeap.add(3)
         minHeap.add(2)
         minHeap.add(4)
-        console.log(minHeap.heap)
         expect(minHeap.heap).toStrictEqual([null, 2, 4, 3, 9])
       })
     })
