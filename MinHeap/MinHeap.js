@@ -19,6 +19,15 @@ class MinHeap {
       current = Math.floor(current / 2)
     }
   }
+  popMin() {
+    if (this.size === 0) {
+      return null;
+    }
+    this.swap(1, this.size);
+    const min = this.heap.pop();
+    this.size--;
+    return min;
+  }
 }
 
 module.exports = MinHeap;

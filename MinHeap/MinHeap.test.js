@@ -28,5 +28,24 @@ describe('MinHeap', () => {
         expect(minHeap.heap).toStrictEqual([null, 2, 4, 3, 9])
       })
     })
+    describe('popMin', () => {
+      test('should return null if trying to remove min from empty list', () => {
+        const minHeap = new MinHeap
+        expect(minHeap.popMin()).toBeNull()
+        expect(minHeap.size).toBe(0)
+      })
+      test('should remove the smallest item from list and bubble up a new min', () => {
+        const minHeap = new MinHeap
+        for (let i = 10; i > 0; i--) {
+          minHeap.add(Math.floor(Math.random(10) * 100))
+        }
+        expect(minHeap.heap[0]).toBeNull();
+        const expected = minHeap.heap[1]
+        expect(minHeap.popMin()).toBe(expected);
+        expect(minHeap.heap[0]).toBeNull();
+      })
+
+    })
+
   })
 })
