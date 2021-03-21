@@ -18,7 +18,14 @@ describe('MinHeap', () => {
         expect(mh.heap[1]).toBe(9);
         expect(mh.heap.length).toBe(2);
       })
+      test('should bubble up the newly added items', () => {
+        const minHeap = new MinHeap
+        minHeap.add(9)
+        minHeap.add(3)
+        minHeap.add(2)
+        console.log(minHeap.heap)
+        expect(minHeap.heap).toStrictEqual([null, 2, 9, 3])
+      })
     })
-
   })
 })
