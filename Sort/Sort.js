@@ -15,7 +15,7 @@ const bubbleSort = (array) => {
   return copy
 }
 
-const mergeTwoSortedArrays = (arr1, arr2) => {
+function mergeTwoSortedArrays(arr1, arr2) {
   let result = []
   let i = 0
   let j = 0
@@ -33,14 +33,19 @@ const mergeTwoSortedArrays = (arr1, arr2) => {
     i++
   }
   while (j < arr2.length) {
-    result.push(arr1[j])
+    result.push(arr2[j])
     j++
   }
   return result
 }
 
-const mergeSort = (arr1, arr2) => {
+const mergeSort = (arr) => {
+  if (arr.length <= 1) return arr
+  let mid = Math.floor(arr.length / 2)
+  let left = mergeSort(arr.slice(0, mid))
+  let right = mergeSort(arr.slice(mid))
 
+  return mergeTwoSortedArrays(left, right)
 }
 
 module.exports = {
