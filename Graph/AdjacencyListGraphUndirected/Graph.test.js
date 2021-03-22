@@ -37,22 +37,32 @@ describe('Graph Class', () => {
         graph.addEdge('bob', 'joe')
         graph.addEdge('bob', 'alice')
         graph.addEdge('joe', 'mary')
-        console.log(graph.adjacencyList)
         expect(graph.adjacencyList['bob']).toStrictEqual(['mary', 'joe', 'alice'])
         expect(graph.adjacencyList['bob'].length).toBe(3)
         expect(graph.adjacencyList['joe'].length).toBe(2)
-        console.log(graph.adjacencyList)
       })
 
     })
     describe('#removeEdge', () => {
-      // const graph = new Graph
-      // graph.addVertex('bob')
-      // graph.addVertex('mary')
-      // expect(graph.adjacencyList['bob']).toStrictEqual(['mary', 'joe', 'alice'])
-      // graph.removeEdge('bob', 'mary')
-      // expect(graph.adjacencyList['bob']).toStrictEqual([])
-      // expect(graph.adjacencyList['mary']).toStrictEqual([])
+      test('should remove and edge between friends', () => {
+        const graph = new Graph
+        graph.adjacencyList = {
+          'bob': ['mary', 'joe', 'alice'],
+          'mary': ['bob', 'joe'],
+          'joe': ['bob', 'mary'],
+          'alice': ['bob']
+        }
+
+        graph.removeEdge('bob', 'mary')
+        // Bob and Mary are no longer friends
+        console.log('graph.adjacencyList', graph.adjacencyList)
+        expect(graph.adjacencyList).toStrictEqual({
+          'bob': ['joe', 'alice'],
+          'mary': ['joe'],
+          'joe': ['bob', 'mary'],
+          'alice': ['bob']
+        })
+      })
     })
 
     describe('#removeVertex', () => {

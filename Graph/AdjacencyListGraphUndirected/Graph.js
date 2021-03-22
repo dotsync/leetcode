@@ -24,8 +24,8 @@ class Graph {
     // find vertex
     if (!vertex1 || !vertex2) throw new Error('Unable to removeEdge because one or both of the verteces do not exist')
     // remove edge
-    this.adjacencyList[vertex1].filter(vertex => { vertex !== vertex2 })
-    this.adjacencyList[vertex2].filter(vertex => { vertex !== vertex1 })
+    this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(v => v !== vertex2)
+    this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(v => v !== vertex1)
   }
   removeVertex(vertex) {
     if (!this.adjacencyList[vertex]) throw new Error('Vertex does not exist in graph')
