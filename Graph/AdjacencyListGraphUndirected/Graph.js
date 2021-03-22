@@ -4,7 +4,12 @@ class Graph {
     this.adjacencyList = {};
   }
   // methods
-  addVertex() {
+  addVertex(vertex) {
+    if (!this.adjacencyList[vertex]) {
+      this.adjacencyList[vertex] = []
+    } else {
+      throw new Error('The vertex you are trying to add already exists. Aborting operation.')
+    }
   }
   addEdge() {
   }
@@ -13,5 +18,11 @@ class Graph {
   removeVertex() {
   }
 }
+
+const graph = new Graph
+graph.addVertex('hello')
+console.log(graph.adjacencyList)
+graph.addVertex('hello')
+
 
 module.exports = Graph;
