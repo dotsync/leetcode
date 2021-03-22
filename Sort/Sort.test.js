@@ -17,9 +17,14 @@ describe('Sorting Algorithms', () => {
   })
   describe('#mergeTwoSortedArrays', () => {
     test('should merge two sorted arrays', () => {
-      const actual = Sort.mergeTwoSortedArrays([3, 6, 7, 9], [1, 2, 4, 5, 8])
-      const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      expect(actual).toStrictEqual(expected)
+      expect(Sort.mergeTwoSortedArrays([3, 6, 7, 9], [1, 2, 4, 5, 8])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9])
     })
   })
+  describe('#mergeSort', () => {
+    test('should sort elements in an array from smallest to largest', () => {
+      expect(Sort.mergeSort([10, 9, 8, 3, 2, 1, 5, 6, 4, 7])).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    })
+
+  })
+
 })
