@@ -20,10 +20,16 @@ describe('Graph Class', () => {
     describe('#addEdge', () => {
       test('should add an edge inbetween two vertices', () => {
         const graph = new Graph
-        graph.addVertex('bob')
-        graph.addVertex('mary')
-        graph.addVertex('joe')
-        graph.addVertex('alice')
+        // graph.addVertex('bob')
+        // graph.addVertex('mary')
+        // graph.addVertex('joe')
+        // graph.addVertex('alice')
+        graph.adjacencyList = {
+          'bob': [],
+          'mary': [],
+          'joe': [],
+          'alice': []
+        }
         /* bob knows mary, mary knows bob
         bob knows joe and alice
         joe knows mary */
@@ -37,6 +43,19 @@ describe('Graph Class', () => {
         expect(graph.adjacencyList['joe'].length).toBe(2)
         console.log(graph.adjacencyList)
       })
+
+    })
+    describe('#removeEdge', () => {
+      // const graph = new Graph
+      // graph.addVertex('bob')
+      // graph.addVertex('mary')
+      // expect(graph.adjacencyList['bob']).toStrictEqual(['mary', 'joe', 'alice'])
+      // graph.removeEdge('bob', 'mary')
+      // expect(graph.adjacencyList['bob']).toStrictEqual([])
+      // expect(graph.adjacencyList['mary']).toStrictEqual([])
+    })
+
+    describe('#removeVertex', () => {
 
     })
 
