@@ -27,7 +27,13 @@ class Graph {
     this.adjacencyList[vertex1].filter(vertex => { vertex !== vertex2 })
     this.adjacencyList[vertex2].filter(vertex => { vertex !== vertex1 })
   }
-  removeVertex() {
+  removeVertex(vertex) {
+    if (!this.adjacencyList[vertex]) throw new Error('Vertex does not exist in graph')
+    for (let i = 0; i < this.adjacencyList[vertex].length; i++) {
+      // remove edges
+      this.removeEdge(vertex, this.adjacencyList[vertex[i]])
+    }
+    delete this.adjacencyList[vertex]
   }
 }
 
