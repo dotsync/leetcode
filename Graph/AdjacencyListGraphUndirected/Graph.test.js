@@ -20,19 +20,12 @@ describe('Graph Class', () => {
     describe('#addEdge', () => {
       test('should add an edge inbetween two vertices', () => {
         const graph = new Graph
-        // graph.addVertex('bob')
-        // graph.addVertex('mary')
-        // graph.addVertex('joe')
-        // graph.addVertex('alice')
         graph.adjacencyList = {
           'bob': [],
           'mary': [],
           'joe': [],
           'alice': []
         }
-        /* bob knows mary, mary knows bob
-        bob knows joe and alice
-        joe knows mary */
         graph.addEdge('bob', 'mary')
         graph.addEdge('bob', 'joe')
         graph.addEdge('bob', 'alice')
