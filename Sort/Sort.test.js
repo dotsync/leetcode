@@ -11,6 +11,9 @@ describe('Sorting Algorithms', () => {
     test('should work with inputs of only one value', () => {
       expect(Sort.bubbleSort([2])).toStrictEqual([2])
     })
+    test('should work with inputs of only 2 items', () => {
+      expect(Sort.bubbleSort([2, 1])).toStrictEqual([1, 2])
+    })
 
   })
 })
