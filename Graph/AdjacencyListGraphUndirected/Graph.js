@@ -15,18 +15,17 @@ class Graph {
     // if vertex doesnt exist, add to list
     if (!this.adjacencyList[vertex1]) this.adjacencyList[vertex1] = []
     if (!this.adjacencyList[vertex2]) this.adjacencyList[vertex2] = []
-    // iterate vertex1 array and look for vertex 2, if it doesn;t exist add it,
-    for (let i = 0; i < this.adjacencyList[vertex1]; i++) {
-      if (this.adjacencyList[vertex1[i]] === vertex2) break
-    }
+
     this.adjacencyList[vertex1].push(vertex2)
-    // interate vertex2 and look for vertex1
-    for (let i = 0; i < this.adjacencyList[vertex2]; i++) {
-      if (this.adjacencyList[vertex2[i]] === vertex1) break
-    }
     this.adjacencyList[vertex2].push(vertex1)
+
   }
-  removeEdge() {
+  removeEdge(vertex1, vertex2) {
+    // find vertex
+    if (!vertex1 || !vertex2) throw new Error('Unable to removeEdge because one or both of the verteces do not exist')
+    // remove edge
+    this.adjacencyList[vertex1].filter(vertex => { vertex !== vertex2 })
+    this.adjacencyList[vertex2].filter(vertex => { vertex !== vertex1 })
   }
   removeVertex() {
   }
