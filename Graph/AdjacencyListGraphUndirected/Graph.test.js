@@ -64,7 +64,7 @@ describe('Graph Class', () => {
           'alice': ['bob']
         }
         graph.removeVertex('bob')
-        console.log('graph.adjacencyList', graph.adjacencyList)
+        // console.log('graph.adjacencyList', graph.adjacencyList)
         expect(graph.adjacencyList).toStrictEqual({
           'mary': ['joe'],
           'joe': ['mary'],
