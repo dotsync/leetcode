@@ -32,8 +32,8 @@ class Graph {
       throw new Error('Expected Vertex arguments')
     }
   }
-  getVertexByValue() {
-
+  getVertexByValue(value) {
+    return this.vertices.find(v => v.data === value)
   }
   print() {
 
