@@ -23,3 +23,5 @@ class Vertex {
     console.log(output);
   }
 }
+
+module.exports = Vertex;
