@@ -40,3 +40,5 @@ class Graph {
     vertexList.forEach(vertex => vertex.print());
   }
 }
+
+module.exports = Graph
