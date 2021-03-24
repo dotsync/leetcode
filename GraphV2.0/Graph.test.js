@@ -15,10 +15,7 @@ describe('Graph v2 class', () => {
         expect(graph.vertices[0].data).toBe(6)
         expect(graph.vertices[1].data).toBe('3')
       })
-
     })
-
   })
-
 })
 
