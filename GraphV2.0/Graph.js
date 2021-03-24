@@ -6,4 +6,22 @@ class Graph {
     this.isDirected = isDirected;
     this.isWeighted = isWeighted;
   }
+  addVertex() {
+
+  }
+  removeVertex() {
+
+  }
+  addEdge() {
+
+  }
+  removeEdge() {
+
+  }
+  getVertexByValue() {
+
+  }
+  print() {
+
+  }
 }
