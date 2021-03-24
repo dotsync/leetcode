@@ -36,6 +36,7 @@ class Graph {
     return this.vertices.find(v => v.data === value)
   }
   print() {
-
+    const vertexList = this.vertices;
+    vertexList.forEach(vertex => vertex.print());
   }
 }
