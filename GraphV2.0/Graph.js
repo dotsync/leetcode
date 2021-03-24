@@ -1,3 +1,5 @@
+const Vertex = require('./Vertex');
+
 class Graph {
   constructor(isDirected = false, isWeighted = false) {
     this.vertices = [];
