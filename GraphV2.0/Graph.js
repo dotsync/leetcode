@@ -6,8 +6,10 @@ class Graph {
     this.isDirected = isDirected;
     this.isWeighted = isWeighted;
   }
-  addVertex() {
-
+  addVertex(data) {
+    const newVertex = newVertex(data);
+    this.vertices.push(newVertex);
+    return newVertex;
   }
   removeVertex() {
 
