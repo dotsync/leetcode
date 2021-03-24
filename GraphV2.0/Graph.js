@@ -11,8 +11,8 @@ class Graph {
     this.vertices.push(newVertex);
     return newVertex;
   }
-  removeVertex() {
-
+  removeVertex(vertex) {
+    this.vertices = this.vertices.filter(v => v !== vertex)
   }
   addEdge() {
 
