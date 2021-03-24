@@ -24,8 +24,13 @@ class Graph {
       throw new Error('Ex[ected Vertex arguments');
     }
   }
-  removeEdge() {
-
+  removeEdge(vertexOne, vertexTwo) {
+    if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex) {
+      vertexOne.removeEdge(vertexTwo);
+      if (!this.isDirected) vertexTwo.removeEdge(vertexOne);
+    } else {
+      throw new Error('Expected Vertex arguments')
+    }
   }
   getVertexByValue() {
 
