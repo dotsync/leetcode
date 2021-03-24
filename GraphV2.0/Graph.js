@@ -7,7 +7,7 @@ class Graph {
     this.isWeighted = isWeighted;
   }
   addVertex(data) {
-    const newVertex = newVertex(data);
+    const newVertex = new Vertex(data);
     this.vertices.push(newVertex);
     return newVertex;
   }
