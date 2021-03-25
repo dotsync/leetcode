@@ -40,12 +40,13 @@ class Graph {
     vertexList.forEach(vertex => vertex.print());
   }
 
-  depthFirstTraversal(start, visitedVertices = [start]) {
+  depthFirstTraversal(start, callback, visitedVertices = [start]) {
+    callback(start)
     start.edges.forEach(edge => {
       const neighbor = edge.end;
       if (!visitedVertices.includes(neighbor)) {
         visitedVertices.push(neighbor);
-        depthFirstTraversal(neighbor, visitedVertices);
+        depthFirstTraversal(neighbor, callback, visitedVertices);
       }
     });
   };
