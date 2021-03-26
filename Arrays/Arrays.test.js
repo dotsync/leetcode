@@ -4,6 +4,7 @@ const maximumSubarray = require('./maximumSubarray');
 const productOfArrayExceptSelf = require('./productOfArrayExceptSelf');
 const twoSum = require('./twoSum');
 const rotateMatrix = require('./rotateMatrix');
+const plusOne = require('./plusOne');
 
 
 
@@ -49,6 +50,18 @@ describe('Arrays', () => {
         expect(containsDuplicate([1, 2, 3, 4])).toBe(false);
       })
     })
+    describe('plusOne', () => {
+      test('should work with empty input', () => {
+        expect(plusOne([])).toStrictEqual([])
+      })
+      test('should increase the arrays last digit by one', () => {
+
+      })
+      test('should work when all digits are 9s', () => {
+
+      })
+    })
+
   })
   describe('Cracking The Coding Interview', () => {
     describe('rotateMatrix', () => {

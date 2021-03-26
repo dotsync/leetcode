@@ -6,6 +6,7 @@ Interesting problem. Easy conceptually but the big take away here is to not rush
 
 const plusOne = digits => {
   let n = digits.length
+  if (n === 0) return digits
   // check for 9's starting from the back
   for (let i = n - 1; i >= 0; i--) {
     if (digits[i] == 9) {
@@ -24,3 +25,4 @@ const plusOne = digits => {
 
 // time O(n)
 // space O(n)
+module.exports = plusOne
