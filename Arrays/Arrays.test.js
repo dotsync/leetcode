@@ -5,6 +5,7 @@ const productOfArrayExceptSelf = require('./productOfArrayExceptSelf');
 const twoSum = require('./twoSum');
 const rotateMatrix = require('./rotateMatrix');
 const plusOne = require('./plusOne');
+const intersect = require('./intersect');
 
 
 
@@ -63,7 +64,17 @@ describe('Arrays', () => {
         expect(plusOne([9, 9, 9])).toStrictEqual([1, 0, 0, 0])
       })
     })
-
+    describe('intersect', () => {
+      test('should work if there are no intersects', () => {
+        expect(intersect([1, 2, 3], [4, 5, 6])).toStrictEqual([])
+        expect(intersect([1, 2, 3], [6])).toStrictEqual([])
+        expect(intersect([3], [6, 2, 2, 2, 7])).toStrictEqual([])
+      })
+      test('should return all the intersects between two arrays', () => {
+        expect(intersect([1, 2, 2, 1], [2, 2])).toStrictEqual([2, 2])
+        expect(intersect([4, 9, 5], [9, 4, 9, 8, 4])).toStrictEqual([4, 9])
+      })
+    })
   })
   describe('Cracking The Coding Interview', () => {
     describe('rotateMatrix', () => {
