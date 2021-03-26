@@ -9,3 +9,5 @@ const singleNumber = nums => {
     }
   }
 };
+
+module.exports = singleNumber
