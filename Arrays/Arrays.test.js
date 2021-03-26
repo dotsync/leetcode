@@ -6,6 +6,7 @@ const twoSum = require('./twoSum');
 const rotateMatrix = require('./rotateMatrix');
 const plusOne = require('./plusOne');
 const intersect = require('./intersect');
+const singleNumber = require('./singleNumber');
 
 
 
@@ -73,6 +74,14 @@ describe('Arrays', () => {
       test('should return all the intersects between two arrays', () => {
         expect(intersect([1, 2, 2, 1], [2, 2])).toStrictEqual([2, 2])
         expect(intersect([4, 9, 5], [9, 4, 9, 8, 4])).toStrictEqual([4, 9])
+      })
+    })
+    describe('singleNumber', () => {
+      test('should return the single number', () => {
+        expect(singleNumber([1, 2, 2])).toBe(1);
+        expect(singleNumber([2, 2, 1])).toBe(1);
+        expect(singleNumber([4, 1, 2, 1, 2])).toBe(4);
+        expect(singleNumber([1])).toBe(1);
       })
     })
   })
