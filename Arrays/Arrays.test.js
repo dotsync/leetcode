@@ -55,10 +55,12 @@ describe('Arrays', () => {
         expect(plusOne([])).toStrictEqual([])
       })
       test('should increase the arrays last digit by one', () => {
-
+        expect(plusOne([1, 2, 3])).toStrictEqual([1, 2, 4])
+        expect(plusOne([1, 2, 9])).toStrictEqual([1, 3, 0])
       })
       test('should work when all digits are 9s', () => {
-
+        expect(plusOne([9])).toStrictEqual([1, 0])
+        expect(plusOne([9, 9, 9])).toStrictEqual([1, 0, 0, 0])
       })
     })
 
