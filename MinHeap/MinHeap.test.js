@@ -43,8 +43,6 @@ describe('MinHeap', () => {
         expect(minHeap.popMin()).toBe(expected);
         expect(minHeap.heap[0]).toBeNull();
       })
-
     })
-
   })
 })
