@@ -50,10 +50,9 @@ describe('Day02 LinkedList List Section', () => {
   /********************/
   describe('Medium Problems', () => {
     describe('copyListWithRandomPointer', () => {
-
+      //TODO: figure out how to test this
     })
     describe('addingTwoNumbers', () => {
-
     })
   })
   /********************/
