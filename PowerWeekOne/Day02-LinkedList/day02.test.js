@@ -20,7 +20,11 @@ describe('Day02 LinkedList List Section', () => {
       const ll = new SinglyLinkedList
       expect(reverseLinkedList(ll.head)).toBeNull();
     })
-
+    test('should reverse the given list', () => {
+      const input = SinglyLinkedList.createListFromValues(5, 4, 3, 2, 1)
+      const expected = SinglyLinkedList.createListFromValues(1, 2, 3, 4, 5)
+      expect(reverseLinkedList(input.head)).toStrictEqual(expected.head)
+    })
   })
   // describe('reverseNodesInKGroups', () => {
 
