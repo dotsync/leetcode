@@ -1,7 +1,7 @@
 const SinglyLinkedList = require('../../LinkedLists/SinglyLinkedList/SinglyLinkedList');
 const copyListWithRandomPointer = require('./copyListWithRandomPointer');
 const reverseLinkedList = require('./reverseLinkedList');
-const mergeTwoSortedLists = require('mergeTwoSortedLists');
+const mergeTwoSortedLists = require('./mergeTwoSortedLists');
 
 describe('Day02 LinkedList List Section', () => {
   /********************/
