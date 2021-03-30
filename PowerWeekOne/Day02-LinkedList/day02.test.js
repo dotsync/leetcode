@@ -8,11 +8,22 @@ describe('Day02 LinkedList List Section', () => {
   // Easy Problems
   /********************/
   describe('mergeTwoSortedLists', () => {
+    test('should work when given two empty lists', () => {
+      const list1 = new SinglyLinkedList
+      const list2 = new SinglyLinkedList
+      expect(mergeTwoSortedLists(list1, list2)).toBeNull();
+    })
     test('should merge when list 1 is empty and 2 is full', () => {
-
+      const list1 = new SinglyLinkedList
+      const list2 = SinglyLinkedList.createListFromValues(2, 3, 5);
+      const expected = SinglyLinkedList.createListFromValues(2, 3, 5);
+      expect(mergeTwoSortedLists(list1, list2)).toStrictEqual(expected);
     })
     test('should merge when list 2 is empty and 1 is full', () => {
-
+      const list1 = SinglyLinkedList.createListFromValues(1, 4, 6);
+      const list2 = new SinglyLinkedList
+      const expected = SinglyLinkedList.createListFromValues(1, 4, 6);
+      expect(mergeTwoSortedLists(list1, list2)).toStrictEqual(expected);
     })
     test('should merge the two sorted lists', () => {
       const list1 = SinglyLinkedList.createListFromValues(1, 4, 6);
