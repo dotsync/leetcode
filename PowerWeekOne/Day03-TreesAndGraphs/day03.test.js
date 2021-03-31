@@ -1,4 +1,5 @@
 const floodFill = require('./floodFill');
+const binaryTreePaths = require('./binaryTreePaths');
 
 describe('Day03 Trees And Graphs Section', () => {
   /** ******************/
@@ -17,6 +18,9 @@ describe('Day03 Trees And Graphs Section', () => {
         const expected = [[1, 1, 1], [1, 1, 0], [1, 0, 1]];
         expect(floodFill(image, 1, 1, 1)).toStrictEqual(expected);
       });
+    });
+    describe('binaryTreePaths', () => {
+
     });
   });
   /** ******************/
