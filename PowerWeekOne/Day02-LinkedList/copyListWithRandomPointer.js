@@ -9,7 +9,7 @@ const copyListWithRandomPointer = (head) => {
     if (!node) return null;
     if (map.get(node)) return map.get(node);
 
-    const n = { data: node.data };
+    const n = {data: node.data};
     map.set(node, n);
 
     n.next = copy(node.next);
