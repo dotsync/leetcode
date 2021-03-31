@@ -36,6 +36,22 @@ describe('Day03 Trees And Graphs Section', () => {
           expect(bt.root.right.left).toBeNull();
           expect(bt.root.right.right).toBeNull();
         });
+        test('should add many nodes to the tree', () => {
+          const bt = new BinaryTree;
+          bt.insert(5);
+          bt.insert(9);
+          bt.insert(3);
+          bt.insert(99);
+          expect(bt.root.data).toBe(5);
+          expect(bt.root.left.data).toBe(9);
+          expect(bt.root.left.left.data).toBe(99);
+          expect(bt.root.left.left.left).toBeNull();
+          expect(bt.root.left.left.right).toBeNull();
+          expect(bt.root.left.right).toBeNull();
+          expect(bt.root.right.data).toBe(3);
+          expect(bt.root.right.left).toBeNull();
+          expect(bt.root.right.right).toBeNull();
+        });
       });
     });
   });
