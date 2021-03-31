@@ -1,11 +1,22 @@
 const containerWithMostWater = require('./containerWithMostWater');
+const firstUniqueChar = require('./firstUniqueChar');
 
 describe('Day01 Strings and Arrays Section', () => {
   /********************/
   // Easy Problems
   /********************/
   describe('Easy Problems', () => {
+    describe('firstUniqueChar', () => {
+      test('should the index at which the first non repeat character can be found', () => {
+        expect(firstUniqueChar('leetcode')).toBe(0);
+        expect(firstUniqueChar('loveleetcode')).toBe(2);
+      })
+      test('should return -1 if there are no repeating characters', () => {
+        expect(firstUniqueChar('')).toBe(-1);
+        expect(firstUniqueChar('aabb')).toBe(-1);
+      })
 
+    })
   })
   /********************/
   // Medium Problems
