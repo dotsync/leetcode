@@ -62,6 +62,13 @@ describe('Day02 LinkedList List Section', () => {
       });
     });
     describe('addingTwoNumbers', () => {
+      test('should reverse the two lists and add them together', () => {
+        const list1 = SinglyLinkedList.createListFromValues(2, 4, 3);
+        const list2 = SinglyLinkedList.createListFromValues(5, 6, 4);
+        const expected = SinglyLinkedList.createListFromValues(7, 0, 8);
+        const actual = addingTwoNumbers(list1.head, list2.head);
+        expect(actual).toStrictEqual(expected.head);
+      });
     });
   });
   /** ******************/
