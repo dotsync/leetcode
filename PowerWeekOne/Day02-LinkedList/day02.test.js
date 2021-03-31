@@ -1,6 +1,6 @@
 const SinglyLinkedList = require(
     '../../LinkedLists/SinglyLinkedList/SinglyLinkedList');
-// const copyListWithRandomPointer = require('./copyListWithRandomPointer');
+const copyListWithRandomPointer = require('./copyListWithRandomPointer');
 const reverseLinkedList = require('./reverseLinkedList');
 const mergeTwoSortedLists = require('./mergeTwoSortedLists');
 
@@ -55,7 +55,11 @@ describe('Day02 LinkedList List Section', () => {
   /** ******************/
   describe('Medium Problems', () => {
     describe('copyListWithRandomPointer', () => {
-      // TODO: figure out how to test this
+      // TODO: create a custom function that creates linked list
+      // They need a random property
+      test('should return a deep copy of the list', () => {
+        expect('this doesnt test').toBe('this doesnt test');
+      });
     });
     describe('addingTwoNumbers', () => {
     });
