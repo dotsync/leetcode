@@ -18,7 +18,7 @@ describe('Day03 Trees And Graphs Section', () => {
           bt.insert(1);
           bt.insert(444);
           expect(bt.root.data).toBe(1);
-          expect(bt.root.left).toBe(444);
+          expect(bt.root.left.data).toBe(444);
           expect(bt.root.left.left).toBeNull();
           expect(bt.root.left.right).toBeNull();
           expect(bt.root.right).toBeNull();
@@ -32,7 +32,7 @@ describe('Day03 Trees And Graphs Section', () => {
           expect(bt.root.left.data).toBe(9);
           expect(bt.root.left.left).toBeNull();
           expect(bt.root.left.right).toBeNull();
-          expect(bt.root.right.data).tobe(3);
+          expect(bt.root.right.data).toBe(3);
           expect(bt.root.right.left).toBeNull();
           expect(bt.root.right.right).toBeNull();
         });
