@@ -1,3 +1,5 @@
-const binaryTreePaths = () => {};
+const binaryTreePaths = () => {
+
+};
 
 module.exports = binaryTreePaths;

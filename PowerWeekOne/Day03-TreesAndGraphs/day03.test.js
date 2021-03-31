@@ -74,10 +74,16 @@ describe('Day03 Trees And Graphs Section', () => {
     });
     describe('binaryTreePaths', () => {
       test('should return a list of all possible routes in tree', () => {
-
+        const bt = new BinaryTree;
+        bt.insert(1);
+        bt.insert(2);
+        bt.insert(3);
+        expect(binaryTreePaths(bt.root)).toStrictEqual(['1->2', '1->3']);
       });
       test('should work when there is only one node in the tree', () => {
-
+        const bt = new BinaryTree;
+        bt.insert(1);
+        expect(binaryTreePaths(bt.root)).toStrictEqual(['1']);
       });
       test('should return empty array if given an empty tree', () => {
 
