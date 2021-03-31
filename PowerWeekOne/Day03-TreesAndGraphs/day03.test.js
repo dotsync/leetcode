@@ -12,6 +12,11 @@ describe('Day03 Trees And Graphs Section', () => {
         const expected1 = [[2, 2, 2], [2, 2, 0], [2, 0, 1]];
         expect(floodFill(image1, 1, 1, 2)).toStrictEqual(expected1);
       });
+      test('should not change color because pixel is already newcolor', () => {
+        const image = [[1, 1, 1], [1, 1, 0], [1, 0, 1]];
+        const expected = [[1, 1, 1], [1, 1, 0], [1, 0, 1]];
+        expect(floodFill(image, 1, 1, 1)).toStrictEqual(expected);
+      });
     });
   });
   /** ******************/
