@@ -3,7 +3,7 @@ const floodFill = require('./floodFill');
 describe('Day03 Trees And Graphs Section', () => {
   /** ******************/
   // Easy Problems
-  // floodFill
+  // binaryTreePaths
   /** ******************/
   describe('Easy Problems', () => {
     describe('floodFill problem', () => {
