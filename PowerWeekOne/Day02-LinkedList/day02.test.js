@@ -69,6 +69,15 @@ describe('Day02 LinkedList List Section', () => {
         const actual = addingTwoNumbers(list1.head, list2.head);
         expect(actual).toStrictEqual(expected.head);
       });
+      test('should work with large lists', () => {
+        const list1 = SinglyLinkedList.createListFromValues(
+            9, 9, 9, 9, 9, 9, 9);
+        const list2 = SinglyLinkedList.createListFromValues(9, 9, 9, 9);
+        const expected = SinglyLinkedList.createListFromValues(
+            8, 9, 9, 9, 0, 0, 0, 1);
+        const actual = addingTwoNumbers(list1.head, list2.head);
+        expect(actual).toStrictEqual(expected.head);
+      });
     });
   });
   /** ******************/
