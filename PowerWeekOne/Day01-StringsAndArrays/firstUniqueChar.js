@@ -1,5 +1,5 @@
 const firstUniqueChar = (string) => {
 
-}
+};
 
-module.exports = firstUniqueChar
+module.exports = firstUniqueChar;
