@@ -1,6 +1,7 @@
 const BinaryTree = require('./BinaryTree');
 const floodFill = require('./floodFill');
 const binaryTreePaths = require('./binaryTreePaths');
+const courseScheduler = require('./courseScheduler');
 
 describe('Day03 Trees And Graphs Section', () => {
   describe('Binary Tree Class', () => {
@@ -57,7 +58,6 @@ describe('Day03 Trees And Graphs Section', () => {
   });
   /** ******************/
   // Easy Problems
-  // binaryTreePaths
   /** ******************/
   describe('Easy Problems', () => {
     describe('floodFill problem', () => {
@@ -72,7 +72,7 @@ describe('Day03 Trees And Graphs Section', () => {
         expect(floodFill(image, 1, 1, 1)).toStrictEqual(expected);
       });
     });
-    describe('binaryTreePaths', () => {
+    describe('binaryTreePaths problem', () => {
       test('should return a list of all possible routes in tree', () => {
         const bt = new BinaryTree;
         bt.insert(1);
@@ -94,10 +94,12 @@ describe('Day03 Trees And Graphs Section', () => {
   // Medium Problems
   // binaryTreeLevelOrderTraversal
   // validateBinarySearchTree
-  // courseScheduler
   // numberOfIslands
   /** ******************/
   describe('Medium Problems', () => {
+    describe('courseScheduler problem', () => {
+
+    });
   });
   /** ******************/
   // Hard Problems
