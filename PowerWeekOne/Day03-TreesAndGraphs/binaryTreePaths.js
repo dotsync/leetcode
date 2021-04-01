@@ -1,4 +1,5 @@
 const binaryTreePaths = (root) => {
+  // result list
   const paths = [];
   if (root === null) return paths;
   dfsPrint(root, '', paths);
@@ -17,9 +18,11 @@ const binaryTreePaths = (root) => {
       paths.push(currentPath);
       return;
     }
+    // check left
     if (currentNode.left !== null) {
       dfsPrint(currentNode.left, currentPath + '->', paths);
     }
+    // check right
     if (currentNode.right !== null) {
       dfsPrint(currentNode.right, currentPath + '->', paths);
     }
