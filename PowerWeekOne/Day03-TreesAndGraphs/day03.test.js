@@ -85,9 +85,6 @@ describe('Day03 Trees And Graphs Section', () => {
         bt.insert(1);
         expect(binaryTreePaths(bt.root)).toStrictEqual(['1']);
       });
-      test('should return empty array if given an empty tree', () => {
-
-      });
     });
   });
   /** ******************/
