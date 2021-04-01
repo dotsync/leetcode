@@ -1,7 +1,7 @@
 const BinaryTree = require('./BinaryTree');
 const floodFill = require('./floodFill');
 const binaryTreePaths = require('./binaryTreePaths');
-const courseScheduler = require('./courseScheduler');
+const courseSchedule = require('./courseSchedule');
 
 describe('Day03 Trees And Graphs Section', () => {
   describe('Binary Tree Class', () => {
