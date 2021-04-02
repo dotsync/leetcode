@@ -1,4 +1,4 @@
-const fibonacci = require('./fibonacci');
+const fib = require('./fibonacci');
 
 describe('Day04 Recursion Section', () => {
   /** ******************/
@@ -7,14 +7,17 @@ describe('Day04 Recursion Section', () => {
   describe('Easy Problems', () => {
     describe('Fibonacci Problem', () => {
       test('should return 0 if input is 0', () => {
-        expect(fibonacci(0)).toBe(0);
+        expect(fib(0)).toBe(0);
       });
       test('should return 1 if input is 1', () => {
-        expect(fibonacci(1)).toBe(1);
+        expect(fib(1)).toBe(1);
       });
       test('should return the fibonacci of the given n', () => {
-        expect(fibonacci(4)).toBe(24);
-        expect(fibonacci(5)).toBe(120);
+        expect(fib(4)).toBe(3);
+        expect(fib(5)).toBe(5);
+        expect(fib(7)).toBe(13);
+        expect(fib(11)).toBe(89);
+        expect(fib(28)).toBe(317811);
       });
     });
   });
