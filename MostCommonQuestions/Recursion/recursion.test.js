@@ -27,8 +27,10 @@ describe('Day04 Recursion Section', () => {
   /** ******************/
   describe('Medium Problems', () => {
     describe('generateParenthesis', () => {
+      test('should return emtpy list when n is 0', () => {
+        expect(generateParenthesis(0)).toStrictEqual(['']);
+      });
       test('should generate a list of all possible combinations', () => {
-        expect(generateParenthesis(0)).toStrictEqual([]);
         expect(generateParenthesis(1)).toStrictEqual(['()']);
         const expected = ['((()))', '(()())', '(())()', '()(())', '()()()'];
         expect(generateParenthesis(3)).toStrictEqual(expected);
