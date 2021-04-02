@@ -1,4 +1,5 @@
 const fib = require('./fibonacci');
+const generateParenthesis = require('./generateParenthesis');
 
 describe('Day04 Recursion Section', () => {
   /** ******************/
@@ -25,6 +26,14 @@ describe('Day04 Recursion Section', () => {
   // Medium Problems
   /** ******************/
   describe('Medium Problems', () => {
+    describe('generateParenthesis', () => {
+      test('should generate a list of all possible combinations', () => {
+        expect(generateParenthesis(0)).toStrictEqual([]);
+        expect(generateParenthesis(1)).toStrictEqual(['()']);
+        const expected = ['((()))', '(()())', '(())()', '()(())', '()()()'];
+        expect(generateParenthesis(3)).toStrictEqual(expected);
+      });
+    });
   });
   /** ******************/
   // Hard Problems
