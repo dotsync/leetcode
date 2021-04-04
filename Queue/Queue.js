@@ -8,6 +8,7 @@ const LinkedList = require('../LinkedLists/SinglyLinkedList/SinglyLinkedList');
 class Queue {
   constructor() {
     this.queue = new LinkedList;
+    this.size = 0;
   }
 }
 
