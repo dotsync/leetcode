@@ -15,14 +15,21 @@ describe('Queue', () => {
         queue.enqueue(1);
         expect(queue.size).toBe(1);
         expect(queue.queue.head.data).toBe(1);
-      })
+      });
       test('should add data to a list containing just one item', () => {
-
-      })
+        queue.enqueue(2);
+        expect(queue.size).toBe(2);
+        expect(queue.queue.head.data).toBe(1);
+        expect(queue.queue.head.next.data).toBe(2);
+      });
       test('should add data to a very large list', () => {
-
-      })
-
+        queue.enqueue(3);
+        queue.enqueue(4);
+        expect(queue.size).toBe(4);
+        expect(queue.queue.head.data).toBe(1);
+        // tail (last out)
+        expect(queue.queue.head.next.next.next.data).toBe(4);
+      });
     });
     describe('#dequeue', () => {
 
