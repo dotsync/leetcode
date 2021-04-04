@@ -10,6 +10,10 @@ class Queue {
     this.queue = new LinkedList;
     this.size = 0;
   }
+  enqueue(data) {
+    this.queue.addAtTail(data);
+    this.size ++;
+  }
 }
 
 module.exports = Queue;
