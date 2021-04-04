@@ -5,7 +5,7 @@ const reverseLinkedList = require('./reverseLinkedList');
 const mergeTwoSortedLists = require('./mergeTwoSortedLists');
 const addingTwoNumbers = require('./addingTwoNumbers');
 
-describe('Day02 LinkedList List Section', () => {
+describe('LinkedList List Section', () => {
   /** ******************/
   // Easy Problems
   /** ******************/
@@ -62,24 +62,24 @@ describe('Day02 LinkedList List Section', () => {
         expect('this doesnt test').toBe('this doesnt test');
       });
     });
-    describe('addingTwoNumbers', () => {
-      test('should reverse the two lists and add them together', () => {
-        const list1 = SinglyLinkedList.createListFromValues(2, 4, 3);
-        const list2 = SinglyLinkedList.createListFromValues(5, 6, 4);
-        const expected = SinglyLinkedList.createListFromValues(7, 0, 8);
-        const actual = addingTwoNumbers(list1.head, list2.head);
-        expect(actual).toStrictEqual(expected.head);
-      });
-      test('should work with large lists', () => {
-        const list1 = SinglyLinkedList.createListFromValues(
-            9, 9, 9, 9, 9, 9, 9);
-        const list2 = SinglyLinkedList.createListFromValues(9, 9, 9, 9);
-        const expected = SinglyLinkedList.createListFromValues(
-            8, 9, 9, 9, 0, 0, 0, 1);
-        const actual = addingTwoNumbers(list1.head, list2.head);
-        expect(actual).toStrictEqual(expected.head);
-      });
-    });
+    // describe('addingTwoNumbers', () => {
+    //   test('should reverse the two lists and add them together', () => {
+    //     const list1 = SinglyLinkedList.createListFromValues(2, 4, 3);
+    //     const list2 = SinglyLinkedList.createListFromValues(5, 6, 4);
+    //     const expected = SinglyLinkedList.createListFromValues(7, 0, 8);
+    //     const actual = addingTwoNumbers(list1.head, list2.head);
+    //     expect(actual).toStrictEqual(expected.head);
+    //   });
+    //   test('should work with large lists', () => {
+    //     const list1 = SinglyLinkedList.createListFromValues(
+    //         9, 9, 9, 9, 9, 9, 9);
+    //     const list2 = SinglyLinkedList.createListFromValues(9, 9, 9, 9);
+    //     const expected = SinglyLinkedList.createListFromValues(
+    //         8, 9, 9, 9, 0, 0, 0, 1);
+    //     const actual = addingTwoNumbers(list1.head, list2.head);
+    //     expect(actual).toStrictEqual(expected.head);
+    //   });
+    // });
   });
   /** ******************/
   // Hard Problems
