@@ -1,5 +1,6 @@
+/* eslint-disable require-jsdoc */
 const SinglyLinkedListNode = require('./SinglyLinkedListNode');
-const util = require('util')
+const util = require('util');
 
 class SinglyLinkedList {
   constructor() {
@@ -10,13 +11,13 @@ class SinglyLinkedList {
   // findSpecficData
   findSpecficData(data) {
     // iterate list
-    let currentNode = this.head
+    let currentNode = this.head;
     let counter = 0;
     while (counter < this.length) {
       // check if current node.data === data
       if (currentNode.data === data) {
         // return the node
-        return counter
+        return counter;
       }
       // update current to be curr.next
       currentNode = currentNode.getNextNode();
@@ -24,20 +25,20 @@ class SinglyLinkedList {
       counter++;
     }
     // not found
-    return -1
+    return -1;
   }
 
   // findSpecificIndex
   findSpecificIndex(index) {
     if (index <= -1 || index >= this.length) return null;
     let currentNode = this.head;
-    if (index === 0) return currentNode
+    if (index === 0) return currentNode;
     let counter = 0;
     while (counter < index) {
       currentNode = currentNode.getNextNode();
       counter++;
     }
-    return currentNode
+    return currentNode;
   }
 
   // addAtHead
@@ -46,9 +47,9 @@ class SinglyLinkedList {
     const oldHead = this.head;
     // check if there is a head
     if (this.head === null) {
-      this.head = newHead
+      this.head = newHead;
     } else {
-      this.head = newHead
+      this.head = newHead;
       this.head.setNextNode(oldHead);
     }
     this.length++;
@@ -66,37 +67,37 @@ class SinglyLinkedList {
   // addAtIndex
   addAtIndex(index, data) {
     if (index <= 0) {
-      this.addAtHead(data)
-      return 0
+      this.addAtHead(data);
+      return 0;
     }
     if (index >= this.length - 1) {
-      this.addAtTail(data)
-      return this.length - 1
+      this.addAtTail(data);
+      return this.length - 1;
     }
-    const prev = this.findSpecificIndex(index - 1)
-    const next = prev.getNextNode()
+    const prev = this.findSpecificIndex(index - 1);
+    const next = prev.getNextNode();
     prev.setNextNode(new SinglyLinkedListNode(data));
-    prev.next.setNextNode(next)
+    prev.next.setNextNode(next);
     this.length++;
     return index;
   }
   // printList
   printList(fullSkeleton, returnTestString) {
-    if (fullSkeleton) return console.log(util.inspect(this.head, false, null, true))
-    let output = 'HEAD->'
-    let currentNode = this.head
+    if (fullSkeleton) return console.log(util.inspect(this.head, false, null, true));
+    let output = 'HEAD->';
+    let currentNode = this.head;
     while (currentNode.next !== null) {
-      output += `${currentNode.data}, `
-      currentNode = currentNode.next
+      output += `${currentNode.data}, `;
+      currentNode = currentNode.next;
     }
     if (returnTestString) return `${util.inspect(this.head, false, null, true)}`;
-    console.log(`${output}<-TAIL`)
+    console.log(`${output}<-TAIL`);
   }
   // (CTCI 2.1) remove all duplicates from the linked list
   removeDupes() {
     const alreadySeen = {};
     let prev = null;
-    let currentNode = this.head
+    let currentNode = this.head;
     while (currentNode !== null) {
       if (alreadySeen[currentNode.data]) {
         prev.next = currentNode.next;
@@ -115,25 +116,25 @@ class SinglyLinkedList {
     let previousNode = null;
     let currentNode = head;
     while (currentNode !== null) {
-      let nextTemp = currentNode.next;
+      const nextTemp = currentNode.next;
       currentNode.next = previousNode;
       previousNode = currentNode;
       currentNode = nextTemp;
     }
-    return previousNode
+    return previousNode;
   }
   /* (leetcode 141)
   Return true if there is a cycle in the linked list. Otherwise, return false.
   */
   hasCycle() {
     let p1 = this.head;
-    if (p1 === null) return false
+    if (p1 === null) return false;
     let p2 = this.head.next;
     while (p2 !== null) {
-      if (p2.next === null) return false
+      if (p2.next === null) return false;
       if (p1 === p2) return true;
-      p1 = p1.next
-      p2 = p2.next.next
+      p1 = p1.next;
+      p2 = p2.next.next;
     }
     return false;
   }
@@ -149,7 +150,7 @@ class SinglyLinkedList {
       currentNode = currentNode.next;
       distanceFromHead--;
     }
-    return currentNode.data
+    return currentNode.data;
   }
   kthToLastNoLength(k, head) {
     let p1 = head;
@@ -159,45 +160,45 @@ class SinglyLinkedList {
       p1 = p1.next;
     }
     while (p1 !== null) {
-      p1 = p1.next
-      p2 = p2.next
+      p1 = p1.next;
+      p2 = p2.next;
     }
-    if (p2 === null) return null
-    else return p2.data
+    if (p2 === null) return null;
+    else return p2.data;
   }
   /* (leetcode 21) Merge 2 sorted linked lists*/
   mergeTwoSortedLists(list1, list2) {
-    let preHead = new SinglyLinkedListNode(-1)
-    let prev = preHead
+    const preHead = new SinglyLinkedListNode(-1);
+    let prev = preHead;
 
     while (list1 != null && list2 !== null) {
       if (list1.data <= list2.data) {
         prev.next = list1;
-        list1 = list1.next
+        list1 = list1.next;
       } else {
-        prev.next = list2
-        list2 = list2.next
+        prev.next = list2;
+        list2 = list2.next;
       }
-      prev = prev.next
+      prev = prev.next;
     }
     prev.next = list1 === null ? list2 : list1;
-    return preHead.next
+    return preHead.next;
   }
   // #partition
   partition(p) {
     let newHead = this.head;
-    if (newHead === null) return this.head
+    if (newHead === null) return this.head;
     let tail = this.head;
     while (this.head !== null) {
-      let next = this.head.getNextNode()
+      const next = this.head.getNextNode();
       if (this.head.data > p) {
-        this.head.setNextNode(newHead)
-        newHead = this.head
+        this.head.setNextNode(newHead);
+        newHead = this.head;
       } else {
-        tail.setNextNode(this.head)
-        tail = this.head
+        tail.setNextNode(this.head);
+        tail = this.head;
       }
-      this.head = next
+      this.head = next;
     }
     tail.next = null;
     return newHead;
@@ -218,12 +219,12 @@ class SinglyLinkedList {
   Your code will only be given the head of the original linked list. */
 }
 
-SinglyLinkedList.createListFromValues = function (...values) {
+SinglyLinkedList.createListFromValues = function(...values) {
   const singlyLinkedList = new SinglyLinkedList();
   for (let i = values.length - 1; i >= 0; i--) {
     singlyLinkedList.addAtHead(values[i]);
   }
   return singlyLinkedList;
-}
+};
 
 module.exports = SinglyLinkedList;
