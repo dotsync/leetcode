@@ -43,9 +43,11 @@ myCircularQueue.Rear();     // return 4
 /**
  * @param {number} k
  */
- var MyCircularQueue = function(k) {
+class MyCircularQueue {
+  constructor(k) {
 
-};
+  }
+}
 
 /**
  * @param {number} value
