@@ -14,6 +14,11 @@ class Queue {
     this.queue.addAtTail(data);
     this.size ++;
   }
+  dequeue() {
+    const data = this.queue.removeHead();
+    this.size--;
+    return data;
+  }
 }
 
 module.exports = Queue;

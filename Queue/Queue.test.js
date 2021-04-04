@@ -1,4 +1,6 @@
+/* eslint-disable max-len */
 const Queue = require('./Queue');
+const LinkedList = require('../LinkedLists/SinglyLinkedList/SinglyLinkedList');
 
 describe('Queue', () => {
   test('should instantiate an empty linked list for queue storage', () => {
@@ -27,12 +29,16 @@ describe('Queue', () => {
         queue.enqueue(4);
         expect(queue.size).toBe(4);
         expect(queue.queue.head.data).toBe(1);
-        // tail (last out)
+        // tail should be 4 (last out)
         expect(queue.queue.head.next.next.next.data).toBe(4);
       });
     });
     describe('#dequeue', () => {
-
+      const queue = new Queue;
+      queue.queue = LinkedList.createListFromValues(1, 2, 3);
+      queue.dequeue();
+      queue.dequeue();
+      expect(queue.queue.head.data).toBe(3);
     });
     describe('#peek', () => {
 

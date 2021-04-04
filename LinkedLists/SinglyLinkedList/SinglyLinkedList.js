@@ -8,6 +8,14 @@ class SinglyLinkedList {
     this.length = 0;
   }
 
+  removeHead() {
+    const removedHead = this.head;
+    if (!removedHead) {
+      return;
+    }
+    this.head = removedHead.getNextNode();
+    return removedHead.data;
+  }
   // findSpecficData
   findSpecficData(data) {
     // iterate list
