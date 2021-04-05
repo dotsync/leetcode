@@ -1,15 +1,16 @@
+/* eslint-disable require-jsdoc */
 function containerWithMostWater(height) {
   let maxWater = 0;
   let leftPointer = 0;
   let rightPointer = height.length - 1;
 
   while (leftPointer < rightPointer) {
-    let min = Math.min(height[leftPointer], height[rightPointer])
-    maxWater = Math.max(maxWater, min * (rightPointer - leftPointer))
+    const min = Math.min(height[leftPointer], height[rightPointer]);
+    maxWater = Math.max(maxWater, min * (rightPointer - leftPointer));
     if (height[leftPointer] < height[rightPointer]) {
-      leftPointer++
+      leftPointer++;
     } else {
-      rightPointer--
+      rightPointer--;
     }
   }
   return maxWater;
