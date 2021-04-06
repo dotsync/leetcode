@@ -2,7 +2,7 @@
 const containerWithMostWater = require('./containerWithMostWater');
 const firstUniqueChar = require('./firstUniqueChar');
 const threeSum = require('./threeSum');
-const integerToEnglishWords = require('integerToEnglishWords');
+const integerToEnglishWords = require('./integerToEnglishWords');
 
 describe('Strings and Arrays Section', () => {
   /** ******************/
@@ -51,9 +51,9 @@ describe('Strings and Arrays Section', () => {
   describe('Hard Problems', () => {
     describe('integerToEnglishWords', () => {
       test('should check input', () => {
-        expect(integerToEnglishWords('Hello')).toBe('Unable to Convert non Intgers');
-        expect(integerToEnglishWords(NaN)).toBe('Unable to Convert non Intgers');
-        expect(integerToEnglishWords(undefined)).toBe('Unable to Convert non Intgers');
+        expect(integerToEnglishWords('Hello')).toBe('Unable to convert non integers');
+        expect(integerToEnglishWords(NaN)).toBe('Unable to convert non integers');
+        expect(integerToEnglishWords(undefined)).toBe('Unable to convert non integers');
       });
 
       test('should work for single digits', () => {
