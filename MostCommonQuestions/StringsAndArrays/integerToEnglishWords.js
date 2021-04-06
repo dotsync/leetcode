@@ -1,5 +1,5 @@
-const intToEnglish = (num) => {
+const integerToEnglishWords = (num) => {
   // Convert a non-negative integer num to its English words representation.
 };
 
-module.exports = intToEnglish;
+module.exports = integerToEnglishWords;

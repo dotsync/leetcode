@@ -1,6 +1,7 @@
 const containerWithMostWater = require('./containerWithMostWater');
 const firstUniqueChar = require('./firstUniqueChar');
 const threeSum = require('./threeSum');
+const integerToEnglishWords = require('integerToEnglishWords');
 
 describe('Strings and Arrays Section', () => {
   /** ******************/
@@ -49,7 +50,16 @@ describe('Strings and Arrays Section', () => {
   describe('Hard Problems', () => {
     describe('integerToEnglishWords', () => {
       test('should work for single digits', () => {
-
+        expect(integerToEnglishWords(1)).toBe('One');
+        expect(integerToEnglishWords(2)).toBe('Two');
+        expect(integerToEnglishWords(3)).toBe('Three');
+        expect(integerToEnglishWords(4)).toBe('Four');
+        expect(integerToEnglishWords(5)).toBe('Five');
+        expect(integerToEnglishWords(6)).toBe('Six');
+        expect(integerToEnglishWords(7)).toBe('Seven');
+        expect(integerToEnglishWords(8)).toBe('Eight');
+        expect(integerToEnglishWords(9)).toBe('Nine');
+        expect(integerToEnglishWords(0)).toBe('Zero');
       });
       test('should work for the tenth place', () => {
 
