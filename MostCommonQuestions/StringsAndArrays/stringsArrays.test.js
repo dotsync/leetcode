@@ -51,9 +51,9 @@ describe('Strings and Arrays Section', () => {
   describe('Hard Problems', () => {
     describe('integerToEnglishWords', () => {
       test('should check input', () => {
-        expect(integerToEnglishWords('Hello')).toBe("Unable to Convert non Intgers");
-        expect(integerToEnglishWords(NaN)).toBe("Unable to Convert non Intgers");
-        expect(integerToEnglishWords(undefined)).toBe("Unable to Convert non Intgers");
+        expect(integerToEnglishWords('Hello')).toBe('Unable to Convert non Intgers');
+        expect(integerToEnglishWords(NaN)).toBe('Unable to Convert non Intgers');
+        expect(integerToEnglishWords(undefined)).toBe('Unable to Convert non Intgers');
       });
 
       test('should work for single digits', () => {
