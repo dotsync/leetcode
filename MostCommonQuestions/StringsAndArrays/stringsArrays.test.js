@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const containerWithMostWater = require('./containerWithMostWater');
 const firstUniqueChar = require('./firstUniqueChar');
 const threeSum = require('./threeSum');
@@ -49,6 +50,12 @@ describe('Strings and Arrays Section', () => {
   /** ******************/
   describe('Hard Problems', () => {
     describe('integerToEnglishWords', () => {
+      test('should check input', () => {
+        expect(integerToEnglishWords('Hello')).toBe("Unable to Convert non Intgers");
+        expect(integerToEnglishWords(NaN)).toBe("Unable to Convert non Intgers");
+        expect(integerToEnglishWords(undefined)).toBe("Unable to Convert non Intgers");
+      });
+
       test('should work for single digits', () => {
         expect(integerToEnglishWords(1)).toBe('One');
         expect(integerToEnglishWords(2)).toBe('Two');
@@ -61,11 +68,44 @@ describe('Strings and Arrays Section', () => {
         expect(integerToEnglishWords(9)).toBe('Nine');
         expect(integerToEnglishWords(0)).toBe('Zero');
       });
-      test('should work for the tenth place', () => {
-
+      test('should work for the teen digits', () => {
+        expect(integerToEnglishWords(11)).toBe('Eleven');
+        expect(integerToEnglishWords(12)).toBe('Twelve');
+        expect(integerToEnglishWords(13)).toBe('Thirteen');
+        expect(integerToEnglishWords(14)).toBe('Fourteen');
+        expect(integerToEnglishWords(15)).toBe('Fifteen');
+        expect(integerToEnglishWords(16)).toBe('Sixteen');
+        expect(integerToEnglishWords(17)).toBe('Seventeen');
+        expect(integerToEnglishWords(18)).toBe('Eighteen');
+        expect(integerToEnglishWords(19)).toBe('Nineteen');
+        expect(integerToEnglishWords(0)).toBe('Zero');
+      });
+      test('should work for the tenth place digit', () => {
+        expect(integerToEnglishWords(10)).toBe('Ten');
+        expect(integerToEnglishWords(20)).toBe('Twenty');
+        expect(integerToEnglishWords(30)).toBe('Thirty');
+        expect(integerToEnglishWords(40)).toBe('Forty');
+        expect(integerToEnglishWords(50)).toBe('Fifty');
+        expect(integerToEnglishWords(60)).toBe('Sixty');
+        expect(integerToEnglishWords(70)).toBe('Seventy');
+        expect(integerToEnglishWords(80)).toBe('Eighty');
+        expect(integerToEnglishWords(90)).toBe('Ninty');
       });
       test('should work for the 100th place', () => {
-
+        expect(integerToEnglishWords(100)).toBe('One Hundred');
+        expect(integerToEnglishWords(101)).toBe('One Hundred One');
+        expect(integerToEnglishWords(111)).toBe('One Hundred Eleven');
+        expect(integerToEnglishWords(200)).toBe('Two Hundred');
+        expect(integerToEnglishWords(220)).toBe('Two Hundred Twenty');
+        expect(integerToEnglishWords(220)).toBe('Two Hundred Twenty One');
+        expect(integerToEnglishWords(300)).toBe('Three Hundred');
+        expect(integerToEnglishWords(400)).toBe('Four Hundred');
+        expect(integerToEnglishWords(400)).toBe('Four Hundred');
+        expect(integerToEnglishWords(500)).toBe('Five Hundred');
+        expect(integerToEnglishWords(600)).toBe('Six Hundred');
+        expect(integerToEnglishWords(700)).toBe('Seven Hundred');
+        expect(integerToEnglishWords(800)).toBe('Eight Hundred');
+        expect(integerToEnglishWords(900)).toBe('Nine Hundred');
       });
     });
   });
