@@ -47,6 +47,16 @@ describe('Strings and Arrays Section', () => {
   // Hard Problems
   /** ******************/
   describe('Hard Problems', () => {
+    describe('integerToEnglishWords', () => {
+      test('should work for single digits', () => {
 
+      });
+      test('should work for the tenth place', () => {
+
+      });
+      test('should work for the 100th place', () => {
+
+      });
+    });
   });
 });
