@@ -97,7 +97,7 @@ describe('Strings and Arrays Section', () => {
         expect(integerToEnglishWords(111)).toBe('One Hundred Eleven');
         expect(integerToEnglishWords(200)).toBe('Two Hundred');
         expect(integerToEnglishWords(220)).toBe('Two Hundred Twenty');
-        expect(integerToEnglishWords(220)).toBe('Two Hundred Twenty One');
+        expect(integerToEnglishWords(221)).toBe('Two Hundred Twenty One');
         expect(integerToEnglishWords(300)).toBe('Three Hundred');
         expect(integerToEnglishWords(400)).toBe('Four Hundred');
         expect(integerToEnglishWords(400)).toBe('Four Hundred');
