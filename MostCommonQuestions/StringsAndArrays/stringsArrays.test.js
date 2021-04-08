@@ -4,6 +4,7 @@ const firstUniqueChar = require('./firstUniqueChar');
 const threeSum = require('./threeSum');
 const integerToEnglishWords = require('./integerToEnglishWords');
 const reorderLogFiles = require('./reorderLogFiles');
+const validParenthesis = require('./validParenthesis');
 
 describe('Strings and Arrays Section', () => {
   /** ******************/
@@ -41,6 +42,24 @@ describe('Strings and Arrays Section', () => {
         const logs = ['dig1 8 1 5 1', 'dig2 3 6'];
         const expected = ['dig1 8 1 5 1', 'dig2 3 6'];
         expect(reorderLogFiles(logs)).toStrictEqual(expected);
+      });
+    });
+    describe('validParenthesis', () => {
+      test('should return true if string has only valid parenthesis', () => {
+        expect(validParenthesis('()')).toBe(true);
+        expect(validParenthesis('{}')).toBe(true);
+        expect(validParenthesis('[]')).toBe(true);
+        expect(validParenthesis('[](){}')).toBe(true);
+        expect(validParenthesis('[]([]){}')).toBe(true);
+        expect(validParenthesis('[]({}){[]}')).toBe(true);
+      });
+      test('should return false if there are any non valid parenthesis', () => {
+        expect(validParenthesis('(')).toBe(false);
+        expect(validParenthesis('}')).toBe(false);
+        expect(validParenthesis('[(]')).toBe(false);
+        expect(validParenthesis('[]({}')).toBe(false);
+        expect(validParenthesis('[]([])}')).toBe(false);
+        expect(validParenthesis('[]}){[]}')).toBe(false);
       });
     });
   });
