@@ -8,14 +8,14 @@ const reorderLogFiles = (logs) => {
     else letterLogs.push(log);
   }
   // sort each log
-  // combine logs
   letterLogs.sort(function(a, b) {
-    if (a.split(' ')[1].localeCompare(b.split(' ')[1])===0 && a.split(' ')[2].localeCompare(b.split(' ')[2])=== 0) {
+    if (a.split(' ')[1].localeCompare(b.split(' ')[1]) === 0 && a.split(' ')[2].localeCompare(b.split(' ')[2])=== 0) {
       return a.split(' ')[0].localeCompare(b.split(' ')[0]);
     } else {
       return a.split(' ')[1].localeCompare(b.split(' ')[1]) || a.split(' ')[2].localeCompare(b.split(' ')[2]);
     }
   });
+  // combine logs
   return letterLogs.concat(digitLogs);
 };
 
