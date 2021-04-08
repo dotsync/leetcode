@@ -29,6 +29,19 @@ describe('Strings and Arrays Section', () => {
         const expected2 = ['g1 act car', 'a8 act zoo', 'ab1 off key dog', 'a1 9 2 3 1', 'zo4 4 7'];
         expect(reorderLogFiles(logs2)).toStrictEqual(expected2);
       });
+      test('should return empty array if given an invalid input', () => {
+        expect(reorderLogFiles([])).toStrictEqual([]);
+      });
+      test('should reorder log files even though there are no number logs', () => {
+        const logs = ['let1 art can', 'let2 own kit dig', 'let3 art zero'];
+        const expected = ['let1 art can', 'let3 art zero', 'let2 own kit dig'];
+        expect(reorderLogFiles(logs)).toStrictEqual(expected);
+      });
+      test('should reorder log files even though there are no letter logs', () => {
+        const logs = ['dig1 8 1 5 1', 'dig2 3 6'];
+        const expected = ['dig1 8 1 5 1', 'dig2 3 6'];
+        expect(reorderLogFiles(logs)).toStrictEqual(expected);
+      });
     });
   });
   /** ******************/
