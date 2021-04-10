@@ -1,4 +1,4 @@
-const sieveOfEratosthenes = limit => {
+const sieveOfEratosthenes = (limit) => {
   // Handle edge cases
   if (limit <= 1) {
     return [];
@@ -22,10 +22,10 @@ const sieveOfEratosthenes = limit => {
     if (current) {
       primes.push(index);
     }
-    return primes
+    return primes;
   }, []);
-}
+};
 
 module.exports = {
-  sieveOfEratosthenes
-}
+  sieveOfEratosthenes,
+};
