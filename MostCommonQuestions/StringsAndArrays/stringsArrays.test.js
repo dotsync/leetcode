@@ -5,6 +5,7 @@ const threeSum = require('./threeSum');
 const integerToEnglishWords = require('./integerToEnglishWords');
 const reorderLogFiles = require('./reorderLogFiles');
 const validParenthesis = require('./validParenthesis');
+const removeZeroes = require('./removeZeroes');
 
 describe('Strings and Arrays Section', () => {
   /** ******************/
@@ -60,6 +61,11 @@ describe('Strings and Arrays Section', () => {
         expect(validParenthesis('[]({}')).toBe(false);
         expect(validParenthesis('[]([])}')).toBe(false);
         expect(validParenthesis('[]}){[]}')).toBe(false);
+      });
+    });
+    describe('removeZeroes', () => {
+      test('should move all zeroes to the end of the array and keep origional order', () => {
+        expect(removeZeroes([0, 1, 0, 3, 12])).toStrictEqual([1, 3, 12, 0, 0]);
       });
     });
   });
