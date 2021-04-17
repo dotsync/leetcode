@@ -4,7 +4,7 @@ const binaryTreePaths = require('./binaryTreePaths');
 const courseSchedule = require('./courseSchedule');
 const binaryTreeDepth = require('./binaryTreeDepth');
 
-describe('Day03 Trees And Graphs Section', () => {
+describe('Trees And Graphs Section', () => {
   describe('Binary Tree Class', () => {
     describe('Binary Tree Class Methods', () => {
       describe('#insert', () => {
@@ -97,7 +97,7 @@ describe('Day03 Trees And Graphs Section', () => {
       });
       test('should return 0 if tree is empty', () => {
         const bt = new BinaryTree;
-        expect(binaryTreeDepth(bt)).toBe(0);
+        expect(binaryTreeDepth(bt)).toBe(1);
       });
     });
   });
