@@ -2,6 +2,7 @@ const BinaryTree = require('./BinaryTree');
 const floodFill = require('./floodFill');
 const binaryTreePaths = require('./binaryTreePaths');
 const courseSchedule = require('./courseSchedule');
+const binaryTreeDepth = require('./binaryTreeDepth');
 
 describe('Day03 Trees And Graphs Section', () => {
   describe('Binary Tree Class', () => {
@@ -84,6 +85,19 @@ describe('Day03 Trees And Graphs Section', () => {
         const bt = new BinaryTree;
         bt.insert(1);
         expect(binaryTreePaths(bt.root)).toStrictEqual(['1']);
+      });
+    });
+    describe('binaryTreeDepth', () => {
+      test('should return the depth of the binary tree', () => {
+        const bt = new BinaryTree;
+        bt.insert(1);
+        bt.insert(2);
+        bt.insert(3);
+        expect(binaryTreeDepth(bt.root)).toBe(2);
+      });
+      test('should return 0 if tree is empty', () => {
+        const bt = new BinaryTree;
+        expect(binaryTreeDepth(bt)).toBe(0);
       });
     });
   });
