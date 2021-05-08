@@ -15,9 +15,8 @@ const maximumSumSubarrayOfSizeK = (array, k) => {
     maxSum = Math.max(maxSum, currentSum);
   }
   return maxSum;
-}
+};
 
 module.exports = maximumSumSubarrayOfSizeK;
-
 
 // run time O(n)

@@ -1,7 +1,7 @@
 const smallestSubarrayForGivenSum = (arr, s) => {
-  let smallestWindow = Infinity,
-    windowSum = 0,
-    windowStart = 0;
+  let smallestWindow = Infinity;
+  let windowSum = 0;
+  let windowStart = 0;
   for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     windowSum += arr[windowEnd];
 
@@ -11,7 +11,7 @@ const smallestSubarrayForGivenSum = (arr, s) => {
       windowStart ++;
     }
   }
-  return smallestWindow === Infinity ? 0 : smallestWindow
+  return smallestWindow === Infinity ? 0 : smallestWindow;
 };
 
 module.exports = smallestSubarrayForGivenSum;
