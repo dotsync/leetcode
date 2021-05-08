@@ -45,24 +45,24 @@ describe('Strings and Arrays Section', () => {
         expect(reorderLogFiles(logs)).toStrictEqual(expected);
       });
     });
-    describe('validParenthesis', () => {
-      test('should return true if string has only valid parenthesis', () => {
-        expect(validParenthesis('()')).toBe(true);
-        expect(validParenthesis('{}')).toBe(true);
-        expect(validParenthesis('[]')).toBe(true);
-        expect(validParenthesis('[](){}')).toBe(true);
-        expect(validParenthesis('[]([]){}')).toBe(true);
-        expect(validParenthesis('[]({}){[]}')).toBe(true);
-      });
-      test('should return false if there are any non valid parenthesis', () => {
-        expect(validParenthesis('(')).toBe(false);
-        expect(validParenthesis('}')).toBe(false);
-        expect(validParenthesis('[(]')).toBe(false);
-        expect(validParenthesis('[]({}')).toBe(false);
-        expect(validParenthesis('[]([])}')).toBe(false);
-        expect(validParenthesis('[]}){[]}')).toBe(false);
-      });
-    });
+    // describe('validParenthesis', () => {
+    //   test('should return true if string has only valid parenthesis', () => {
+    //     expect(validParenthesis('()')).toBe(true);
+    //     expect(validParenthesis('{}')).toBe(true);
+    //     expect(validParenthesis('[]')).toBe(true);
+    //     expect(validParenthesis('[](){}')).toBe(true);
+    //     expect(validParenthesis('[]([]){}')).toBe(true);
+    //     expect(validParenthesis('[]({}){[]}')).toBe(true);
+    //   });
+    //   test('should return false if there are any non valid parenthesis', () => {
+    //     expect(validParenthesis('(')).toBe(false);
+    //     expect(validParenthesis('}')).toBe(false);
+    //     expect(validParenthesis('[(]')).toBe(false);
+    //     expect(validParenthesis('[]({}')).toBe(false);
+    //     expect(validParenthesis('[]([])}')).toBe(false);
+    //     expect(validParenthesis('[]}){[]}')).toBe(false);
+    //   });
+    // });
     describe('removeZeroes', () => {
       test('should move all zeroes to the end of the array and keep origional order', () => {
         expect(removeZeroes([0, 1, 0, 3, 12])).toStrictEqual([1, 3, 12, 0, 0]);

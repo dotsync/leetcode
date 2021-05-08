@@ -19,7 +19,7 @@ const validParenthesis = (string) => {
   return true;
   // helper checks i vs j
   function isPair(array, a, b) {
-    console.log(array[a], array[b])
+    // console.log(array[a], array[b])
     if (array[a] === '(' && array[b] === ')') return true;
     // if (array[a] === ')' && array[b] === '(') return true;
     else if (array[a] === '[' && array[b] === ']') return true;
