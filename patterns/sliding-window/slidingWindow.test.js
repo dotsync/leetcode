@@ -49,9 +49,7 @@ describe('Sliding Window Problems', () => {
       expect(fruitsInBaskets([])).toBe(0);
     });
     test('should return the correct amount of fruits', () => {
-      // Result is 3 because a, c, a is the most optimal row for collecting fruits
       expect(fruitsInBaskets(['a', 'b', 'a', 'c', 'a'])).toBe(3);
-      // Result is 5 because b, c, b, b, c is the most optimal row for collecting fruits
       expect(fruitsInBaskets(['A', 'B', 'C', 'B', 'B', 'C'])).toBe(5);
     });
   });
@@ -66,6 +64,10 @@ describe('Sliding Window Problems', () => {
     });
   });
   describe('longestSubstringWithSameLettersAfterReplacement', () => {
-
+    test('should return the longest Substring With Same Letters After Replacement', () => {
+      expect(longestSubstringWithSameLettersAfterReplacement('aabccbb', 2)).toBe(5);
+      expect(longestSubstringWithSameLettersAfterReplacement('abbcb', 1)).toBe(4);
+      expect(longestSubstringWithSameLettersAfterReplacement('abccde', 1)).toBe(3);
+    });
   });
 });
