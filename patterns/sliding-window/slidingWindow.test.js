@@ -70,4 +70,14 @@ describe('Sliding Window Problems', () => {
       expect(longestSubstringWithSameLettersAfterReplacement('abccde', 1)).toBe(3);
     });
   });
+  describe('squaringASortedArray', () => {
+    test('should return an empty array if given invalid input', () => {
+      expect(squaringASortedArray([])).toStrictEqual([]);
+    });
+    test('should return a sorted array of squared numbers', () => {
+      expect(squaringASortedArray([0, 0, 0, 0, 0])).toStrictEqual([0, 0, 0, 0, 0]);
+      expect(squaringASortedArray([-2, -1, 0, 2, 3])).toStrictEqual([0, 1, 4, 4, 9]);
+      expect(squaringASortedArray([-3, -1, 0, 1, 2])).toStrictEqual([0, 1, 1, 4, 9]);
+    });
+  });
 });
