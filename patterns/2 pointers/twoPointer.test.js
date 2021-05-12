@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const pairWithTargetSum = require('./pairWithTargetSum');
 const removeDuplicates = require('./removeDuplicates');
+const squaringASortedArray = require('./squaringASortedArray');
 
 describe('twoPointer Pattern', () => {
   describe('pairWithTargetSum', () => {

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const Sort = require('./Sort');
 
 describe('Sorting Algorithms', () => {
