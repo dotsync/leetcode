@@ -1,26 +1,23 @@
 const squaringASortedArray = (array) => {
-  // input is sorted [-2, -1, 0, 2, 3]
-  const swap = (sortedArray) => {
-    let i = 0; let j = 1;
-    // check if already sorted
-    if (Math.abs(array[0]) < Math.abs(array[1])) return array;
-    while (Math.abs(array[i]) < Math.abs(array[j])) {
-      // swap then reset pointers
-      temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-      i++;
-      j++;
+  const result = Array(array.length).fill(0);
+  // create pointers
+  let left = 0; let right = array.length - 1;
+  let largestSquare = array.length - 1;
+  // while left is less than right
+  // compare squares, and assign largest to the right
+  while (left < right) {
+    const leftSquare = array[left] * array[left];
+    const rightSquare = array[right] * array[right];
+    if (leftSquare > rightSquare) {
+      result[largestSquare] = leftSquare;
+      left++;
+    } else {
+      result[largestSquare] = rightSquare;
+      right--;
     }
-    i = 0;
-    j = 1;
-  };
-  swap(array);
-  console.log(array);
-  for (let i = 0; i < array.length; i ++) {
-    array[i] = array[i] * array[i];
+    largestSquare--;
   }
-  return array;
+  return result;
 };
 
 module.exports = squaringASortedArray;
