@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 /* eslint-disable max-len */
 const MovingAverageFromDataStream = require('./MovingAverageFromDataStream');
 const Queue = require('./Queue');
@@ -52,6 +53,17 @@ describe('Queue', () => {
       expect(stream3.next(10)).toBe(5.5);
       expect(stream3.next(3)).toBe(4.666666666666667);
       expect(stream3.next(5)).toBe(6.0);
+    });
+    test('should return the movingAverage Sum to be 1', () => {
+      const stream3 = new MovingAverageFromDataStream(3);
+      expect(stream3.next(1)).toBe(1);
+      expect(stream3.next(1)).toBe(1);
+      expect(stream3.next(1)).toBe(1);
+      expect(stream3.next(1)).toBe(1);
+      const stream2 = new MovingAverageFromDataStream(2);
+      expect(stream2.next(1)).toBe(1);
+      expect(stream2.next(1)).toBe(1);
+      expect(stream2.next(1)).toBe(1);
     });
   });
 });
