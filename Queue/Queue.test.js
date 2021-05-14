@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+const MovingAverageFromDataStream = require('./MovingAverageFromDataStream');
 const Queue = require('./Queue');
 const LinkedList = require('../LinkedLists/SinglyLinkedList/SinglyLinkedList');
 
@@ -42,6 +43,15 @@ describe('Queue', () => {
     });
     describe('#peek', () => {
 
+    });
+  });
+  describe('movingAverageFromDataStream', () => {
+    test('should return the moving Average from a data stream', () => {
+      const stream3 = new MovingAverageFromDataStream(3);
+      expect(stream3.next(1)).toBe(1);
+      expect(stream3.next(10)).toBe(5.5);
+      expect(stream3.next(3)).toBe(4.666666666666667);
+      expect(stream3.next(5)).toBe(6.0);
     });
   });
 });
