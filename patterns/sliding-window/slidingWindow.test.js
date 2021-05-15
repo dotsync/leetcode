@@ -4,6 +4,7 @@ const smallestSubarrayForGivenSum = require('./smallestSubarrayForGivenSum');
 const longestSubstringWithKDistinctChars = require('./longestSubstringWithKDistinctChars');
 const fruitsInBaskets = require('./fruitsInBaskets');
 const noRepeatSubstring = require('./noRepeatSubstring');
+const longestSubarrayWithOnesAfterReplacment = require('./longestSubarrayWithOnesAfterReplacment');
 const longestSubstringWithSameLettersAfterReplacement = require('./longestSubstringWithSameLettersAfterReplacement');
 
 describe('Sliding Window Problems', () => {
@@ -68,6 +69,16 @@ describe('Sliding Window Problems', () => {
       expect(longestSubstringWithSameLettersAfterReplacement('aabccbb', 2)).toBe(5);
       expect(longestSubstringWithSameLettersAfterReplacement('abbcb', 1)).toBe(4);
       expect(longestSubstringWithSameLettersAfterReplacement('abccde', 1)).toBe(3);
+    });
+  });
+  describe('longestSubarrayWithOnesAfterReplacment', () => {
+    describe('should return the length of the longest subarray ', () => {
+      test('With large inputs ', () => {
+        const input = [0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1];
+        /*                            1  1  1  1  1  1    */
+        const actual = longestSubarrayWithOnesAfterReplacment(input, 2);
+        expect(actual).toBe(6);
+      });
     });
   });
 });
