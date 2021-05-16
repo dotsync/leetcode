@@ -3,6 +3,7 @@ const pairWithTargetSum = require('./pairWithTargetSum');
 const removeDuplicates = require('./removeDuplicates');
 const squaringASortedArray = require('./squaringASortedArray');
 const tripleSumToZero = require('./tripleSumToZero');
+const tripleClosestToTarget = require('./tripleClosestToTarget');
 
 describe('twoPointer Pattern', () => {
   describe('pairWithTargetSum', () => {
@@ -61,6 +62,24 @@ describe('twoPointer Pattern', () => {
     });
     test('should ignore zeros and return triplet', () => {
 
+    });
+  });
+  describe('tripleClosestToTarget', () => {
+    test('should return sum of all digits if given less then 3 digits in input', () => {
+      const input = [3, 2];
+      expect(tripleClosestToTarget(input, 100)).toBe(5);
+    });
+    test('should return the sum of the 3 digits that are closest to target', () => {
+      let input = [3, 2, 2];
+      expect(tripleClosestToTarget(input, 4)).toBe(7);
+      input = [1, 1, 1, 0], target = 40;
+      expect(tripleClosestToTarget(input, target)).toBe(3);
+      input = [1, 1, 1, 38], target = 40;
+      expect(tripleClosestToTarget(input, target)).toBe(40);
+      input = [1, 1, 1, 39], target = 40;
+      expect(tripleClosestToTarget(input, target)).toBe(41);
+      input = [1, 1, 1, 37], target = 40;
+      expect(tripleClosestToTarget(input, target)).toBe(39);
     });
   });
 });
