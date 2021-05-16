@@ -6,6 +6,7 @@ const fruitsInBaskets = require('./fruitsInBaskets');
 const noRepeatSubstring = require('./noRepeatSubstring');
 const longestSubarrayWithOnesAfterReplacment = require('./longestSubarrayWithOnesAfterReplacment');
 const longestSubstringWithSameLettersAfterReplacement = require('./longestSubstringWithSameLettersAfterReplacement');
+const permutationsInAString = require('./permutationsInAString');
 
 describe('Sliding Window Problems', () => {
   describe('maximumSumSubarrayOfSizeK', () => {
@@ -79,6 +80,21 @@ describe('Sliding Window Problems', () => {
         const actual = longestSubarrayWithOnesAfterReplacment(input, 2);
         expect(actual).toBe(6);
       });
+    });
+  });
+  describe('permutationsInAString', () => {
+    test('should return true bacuse the permutation exists in the string', () => {
+      expect(permutationsInAString('ab', 'a')).toBe(true);
+      expect(permutationsInAString('abcfgsgs', 'gfcbasgs')).toBe(true);
+      expect(permutationsInAString('abc', 'cba')).toBe(true);
+      expect(permutationsInAString('hepqnsz', 'peqns')).toBe(true);
+      expect(permutationsInAString('hepqnsz', 'hepqnsz')).toBe(true);
+    });
+    test('should return false bacuse the permutation does not exist in the string', () => {
+      expect(permutationsInAString('ab', 'c')).toBe(false);
+      expect(permutationsInAString('abksf', 'ce')).toBe(false);
+      expect(permutationsInAString('', 'abc')).toBe(false);
+      expect(permutationsInAString('ahgkjew', '')).toBe(false);
     });
   });
 });
