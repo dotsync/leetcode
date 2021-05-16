@@ -2,6 +2,7 @@
 const pairWithTargetSum = require('./pairWithTargetSum');
 const removeDuplicates = require('./removeDuplicates');
 const squaringASortedArray = require('./squaringASortedArray');
+const tripleSumToZero = require('./tripleSumToZero');
 
 describe('twoPointer Pattern', () => {
   describe('pairWithTargetSum', () => {
@@ -39,6 +40,27 @@ describe('twoPointer Pattern', () => {
       expect(squaringASortedArray([0, 0, 0, 0, 0])).toStrictEqual([0, 0, 0, 0, 0]);
       expect(squaringASortedArray([-2, -1, 0, 2, 3])).toStrictEqual([0, 1, 4, 4, 9]);
       expect(squaringASortedArray([-3, -1, 0, 1, 2])).toStrictEqual([0, 1, 1, 4, 9]);
+    });
+  });
+  describe('tripleSumToZero', () => {
+    test('should return empty array because given input is less than 3', () => {
+      expect(tripleSumToZero([])).toStrictEqual([]);
+      expect(tripleSumToZero([1])).toStrictEqual([]);
+      expect(tripleSumToZero([1, 2])).toStrictEqual([]);
+    });
+    test('should should return empty array because no triplets exist ', () => {
+      expect(tripleSumToZero([-3, -3, -3])).toStrictEqual([]);
+      expect(tripleSumToZero([4, 5, 6])).toStrictEqual([]);
+      expect(tripleSumToZero([-3, -9, 2])).toStrictEqual([]);
+      expect(tripleSumToZero([0, 1, -3])).toStrictEqual([]);
+    });
+    test('should should return the triplets that sum to zero', () => {
+      expect(tripleSumToZero([-3, 2, 1])).toStrictEqual([[-3, 1, 2]]);
+      expect(tripleSumToZero([-3, 0, 1, 2, -1, 1, -2])).toStrictEqual([[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]);
+      expect(tripleSumToZero([-5, 2, -1, -2, 3])).toStrictEqual([[-5, 2, 3], [-2, -1, 3]]);
+    });
+    test('should ignore zeros and return triplet', () => {
+
     });
   });
 });
