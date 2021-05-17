@@ -4,6 +4,7 @@ const removeDuplicates = require('./removeDuplicates');
 const squaringASortedArray = require('./squaringASortedArray');
 const tripleSumToZero = require('./tripleSumToZero');
 const tripleClosestToTarget = require('./tripleClosestToTarget');
+const tripletsLessThanTarget = require('./tripletsLessThanTarget');
 
 describe('twoPointer Pattern', () => {
   describe('pairWithTargetSum', () => {
@@ -80,6 +81,12 @@ describe('twoPointer Pattern', () => {
       expect(tripleClosestToTarget(input, target)).toBe(41);
       input = [1, 1, 1, 37], target = 40;
       expect(tripleClosestToTarget(input, target)).toBe(39);
+    });
+  });
+  describe('tripletsLessThanTarget', () => {
+    test('should return the amount of triplets less than target', () => {
+      expect(tripletsLessThanTarget([-1, 0, 2, 3], 3)).toBe(2);
+      expect(tripletsLessThanTarget([-1, 4, 2, 1, 3], 5)).toBe(4);
     });
   });
 });

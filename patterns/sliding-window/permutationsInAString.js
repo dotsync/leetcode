@@ -13,8 +13,6 @@ const permutationsInAString = (str, pattern) => {
     charFrequency[chr] += 1;
   }
 
-  // Our goal is to match all the characters from the 'charFrequency' with the current window
-  // try to extend the range [windowStart, windowEnd]
   for (windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
     if (rightChar in charFrequency) {
