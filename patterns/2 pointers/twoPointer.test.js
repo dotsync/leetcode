@@ -5,6 +5,7 @@ const squaringASortedArray = require('./squaringASortedArray');
 const tripleSumToZero = require('./tripleSumToZero');
 const tripleClosestToTarget = require('./tripleClosestToTarget');
 const tripletsLessThanTarget = require('./tripletsLessThanTarget');
+const subArraysWithProductLessThanTarget = require('./subArraysWithProductLessThanTarget');
 
 describe('twoPointer Pattern', () => {
   describe('pairWithTargetSum', () => {
@@ -87,6 +88,11 @@ describe('twoPointer Pattern', () => {
     test('should return the amount of triplets less than target', () => {
       expect(tripletsLessThanTarget([-1, 0, 2, 3], 3)).toBe(2);
       expect(tripletsLessThanTarget([-1, 4, 2, 1, 3], 5)).toBe(4);
+    });
+  });
+  describe('subArraysWithProductLessThanTarget', () => {
+    test('should return the subArrays in which the product is less than the target', () => {
+      expect(subArraysWithProductLessThanTarget([1], 1)).toBe(1);
     });
   });
 });
