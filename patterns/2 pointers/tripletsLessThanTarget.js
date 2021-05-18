@@ -8,7 +8,6 @@ const tripletsLessThanTarget = (numsArray, target) => {
     while (left < right) {
       const pairSum = numsArray[left] + numsArray[right];
       if (pairSum < difference) {
-        console.log(count, right, left)
         count += right - left;
         left++;
       } else {
