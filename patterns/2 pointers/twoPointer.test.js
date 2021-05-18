@@ -93,6 +93,8 @@ describe('twoPointer Pattern', () => {
   describe('subArraysWithProductLessThanTarget', () => {
     test('should return the subArrays in which the product is less than the target', () => {
       expect(subArraysWithProductLessThanTarget([1], 1)).toBe(1);
+      expect(subArraysWithProductLessThanTarget([2, 5, 3, 10], 30)).toStrictEqual([[2], [5], [2, 5], [3], [5, 3], [10]]);
+      expect(subArraysWithProductLessThanTarget([8, 2, 6, 5], 50)).toStrictEqual([[8], [2], [8, 2], [6], [2, 6], [5], [6, 5]]);
     });
   });
 });
