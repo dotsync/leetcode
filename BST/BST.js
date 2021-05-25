@@ -74,8 +74,61 @@ class BinarySearchTree {
     return result;
   }
   reverseBreadthFirstSearch() {
+    /*
+    8
+  3  10
+    returns: [10, 3, 8]
+    */
+    const queue = [];
     const result = [];
+    let node = this.root;
+    if (node !== null) queue.push(node);
+    while (queue.length) {
+      // get next item in queue
+      const siblings = [];
+      const siblingsLength = queue.length;
+      for (let i = 0; i < siblingsLength; i++) {
+        node = queue.shift();
+        siblings.push(node.data);
+        if (node.left !== null) {
+          queue.push(node.left);
+        }
+        if (node.right !== null) {
+          queue.push(node.right);
+        }
+      }
+      result.unshift(siblings);
+    }
+    return result;
   }
+  // reverseBreadthFirstSearch(root) {
+  //   const result = [];
+  //   if (this.root === null) {
+  //     return result;
+  //   }
+  //   let currentNode = this.root;
+  //   const queue = [];
+  //   queue.push(currentNode);
+  //   while (queue.length > 0) {
+  //     let levelSize = queue.length;
+  //     let currentLevel = [];
+  //     for (let i = 0; i < levelSize; i++) {
+  //       currentNode = queue.shift();
+  //       // add the node to the current level
+  //       currentLevel.push(currentNode.data);
+  //       // insert the children of current node in the queue
+  //       if (currentNode.left !== null) {
+  //         queue.push(currentNode.left);
+  //       }
+  //       if (currentNode.right !== null) {
+  //         queue.push(currentNode.right);
+  //       }
+  //     }
+  //     result.unshift(currentLevel);
+  //   }
+  //   console.log(result)
+  //   return result;
+  // }
   postOrderDFS() {
     const result = [];
     function traverse(currentTreeNode) {
