@@ -106,16 +106,18 @@ describe('BinarySearchTree', () => {
       });
       test('should return the reverse breadth first search of small tree', () => {
         const bst = BinarySearchTree.createFromValues(8, 3, 10);
-        const expected = [10, 3, 8];
-        expect(bst.reverseBreadthFirstSearch().toStrictEqual(expected));
+        const expected = [[3, 10], [8]];
+        const actual = bst.reverseBreadthFirstSearch();
+        expect(actual).toStrictEqual(expected);
+      });
+      test('should return the reverse BFS of medium BST', () => {
+        const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
+        const expected = [[5, 9, 11, 15], [6, 12], [10]];
+        const actual = bst.reverseBreadthFirstSearch();
+        expect(actual).toStrictEqual(expected);
       });
     });
-
     describe('#DFS', () => {
-      /*
-              10
-          6        12
-      5      9  11    15   */
       describe('Post Order', () => {
         test('should return values from a tree in post order', () => {
           const bst = BinarySearchTree.createFromValues(10, 6, 5, 9, 12, 11, 15);
@@ -148,19 +150,3 @@ describe('BinarySearchTree', () => {
     });
   });
 });
-
-
-/**
- * created a BST node class, a BST class and a BST test suite
- * Using Test Driven Development, implemented an INSERT method for BST and built out the test suite
- * Built a method that returns a BST built from given values
- * Using Test Driven Development, implemented a FIND method for BST and built out the test suite
- * ---- break
- * ---- break
- * Traversal methods
- * BFS
- * DPS
- *  - Preorder
- *  - Inorder
- *  - Postorder
- */
