@@ -88,7 +88,7 @@ describe('BinarySearchTree', () => {
       });
     });
     describe('#BFS', () => {
-      test('should return -1 of given empty tree', () => {
+      test('should return -1 if given empty tree as input', () => {
         const bst = new BinarySearchTree;
         expect(bst.breadthFirstSearch()).toBe(-1);
       });
@@ -99,6 +99,18 @@ describe('BinarySearchTree', () => {
         expect(bst.breadthFirstSearch()).toStrictEqual(expected);
       });
     });
+    describe('#reverseBFS', () => {
+      test('should return empty array if given empty tree as input', () => {
+        const bst = new BinarySearchTree;
+        expect(bst.reverseBreadthFirstSearch()).toStrictEqual([]);
+      });
+      test('should return the reverse breadth first search of small tree', () => {
+        const bst = BinarySearchTree.createFromValues(8, 3, 10);
+        const expected = [10, 3, 8];
+        expect(bst.reverseBreadthFirstSearch().toStrictEqual(expected));
+      });
+    });
+
     describe('#DFS', () => {
       /*
               10
