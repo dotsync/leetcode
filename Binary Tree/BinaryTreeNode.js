@@ -1,9 +1,9 @@
 /* eslint-disable require-jsdoc */
-class TreeNode {
+class BinaryTreeNode {
   constructor(data) {
     this.left = null;
     this.right = null;
     this.data = data;
   }
 }
-module.exports = TreeNode;
+module.exports = BinaryTreeNode;
