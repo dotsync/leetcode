@@ -2,6 +2,7 @@
 const BinaryTreeNode = require('./BinaryTreeNode');
 const BinaryTree = require('./BinaryTree');
 
+
 describe('BinaryTree Class', () => {
   test('should instantiate a class with a root property', () => {
     const bt = new BinaryTree;
@@ -62,9 +63,5 @@ describe('BinaryTree Class', () => {
         expect(bt.root.right.right.data).toBe(7);
       });
     });
-    describe('', () => {
-
-    })
-
   });
 });
