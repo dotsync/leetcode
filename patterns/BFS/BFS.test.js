@@ -7,7 +7,7 @@ describe('Breadth First Search Problems', () => {
   describe('rowAverage', () => {
     test('should return empty array if given empty list', () => {
       const bt = new BinaryTree;
-      expect(rowAverage(bt)).toStrictEqual([]);
+      expect(rowAverage(bt.root)).toStrictEqual([]);
     });
     test('should calvulate the average of each row and retun them in an array', () => {
       const root = new BinaryTreeNode(12);
