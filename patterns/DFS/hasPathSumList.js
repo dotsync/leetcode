@@ -1,15 +1,14 @@
 /* eslint-disable max-len */
-const Deque = require('collections/deque'); //http://www.collectionsjs.com
 /* eslint-disable require-jsdoc */
 module.exports = hasPathSumList = (root, sum) => {
   return findPathsRecursive(root, sum, [], []);
 };
 
-
 function findPathsRecursive(currentNode, sum, sublist, result) {
-  if (currentNode === null) {
+  if (currentNode == null) {
     return;
   }
+  console.log(sublist);
   sublist.push(currentNode.val);
   if (currentNode.val === sum && currentNode.left === null && currentNode.right === null) {
     result.push(sublist.slice());
@@ -19,6 +18,7 @@ function findPathsRecursive(currentNode, sum, sublist, result) {
   }
   // backtrack
   sublist.pop();
+  console.log(result);
   return result;
 }
 

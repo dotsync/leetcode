@@ -39,7 +39,7 @@ describe('Depth First Search (DFS) problems', () => {
   describe('hasPathSumList', () => {
     test('should return the sublists of the node values that add to k', () => {
       const expected = [[1, 3, 6]];
-      expect(hasPathSumList(binaryRoot, 10)).toStrictEqual(expected)
+      expect(hasPathSumList(binaryRoot, 10)).toStrictEqual(expected);
     });
   });
 });
