@@ -18,20 +18,21 @@
 // };
 
 const maximumSumSubarrayOfSizeK = (arr, k) => {
-  let windowSum = 0;
-  let windowStart = 0;
+  if (k > arr.length) return null;
   let max = 0;
+  let currentWindowSum = 0;
+  let start = 0;
 
-  for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
-    windowSum += arr[windowEnd];
-    if (windowEnd >= k - 1) {
+  for (let end = 0; end < arr.length; end++) {
+    currentWindowSum += arr[end];
+    if (end - start > k - 1) {
       // move start
-      max = Math.max(max, windowSum);
-      windowSum -= arr[windowStart];
-      windowStart++;
+      currentWindowSum -= arr[start];
+      start++;
     }
+    max = Math.max(max, currentWindowSum);
   }
-  return max || windowSum;
+  return max;
 };
 
 module.exports = maximumSumSubarrayOfSizeK;

@@ -1,18 +1,18 @@
 /* eslint-disable require-jsdoc */
 const findPermutations = (nums) => {
-  const res = [];
-  permutation(nums, 0, nums.length - 1, res);
-  return res;
+  const result = [];
+  permutation(nums, 0, nums.length - 1, result);
+  return result;
 };
 
-function permutation(arr, pos, n, res) {
-  if (pos === n) {
-    res.push([...arr]);
+function permutation(arr, index, n, result) {
+  if (index === n) {
+    result.push([...arr]);
   } else {
-    for (let x = pos; x <= n; x++) {
-      swap(arr, pos, x);
-      permutation(arr, pos + 1, n, res);
-      swap(arr, pos, x);
+    for (let i = index; i <= n; i++) {
+      swap(arr, index, i);
+      permutation(arr, index + 1, n, result);
+      swap(arr, index, i);
     }
   }
 }
