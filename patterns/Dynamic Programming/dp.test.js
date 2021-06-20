@@ -2,7 +2,7 @@ const fib = require('./fiboncai');
 
 describe('Dynamic Programming', () => {
   describe('fiboncai problem', () => {
-    test('should return the fib of n', () => {
+    test('should return first 10 fib sequences', () => {
       expect(fib(0)).toBe(0);
       expect(fib(1)).toBe(1);
       expect(fib(2)).toBe(1);
@@ -13,6 +13,7 @@ describe('Dynamic Programming', () => {
       expect(fib(7)).toBe(13);
       expect(fib(8)).toBe(21);
       expect(fib(9)).toBe(34);
+      expect(fib(10)).toBe(55);
     });
   });
 });
